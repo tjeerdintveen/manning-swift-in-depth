@@ -11,26 +11,24 @@ struct BirthDay {
     let lastName: String
 }
 
-struct Calendar {
+struct CalendarItems {
     let birthdays: [BirthDay]
     let events: [Event]
 }
 
-
-
-let regularEvents = [
+let events = [
     Event(date: Date(timeIntervalSince1970: 1_520_000_000), title: "Watching the Lion King"),
     Event(date: Date(timeIntervalSince1970: 1_504_000_000), title: "A pleasant rootcanal at the dentist")
 ]
 
 let birthdays = [
-    BirthDay(date: Date(timeIntervalSince1970: -2_148_249_600), firstName: "Walt", lastName: "Disney")
+    BirthDay(date: Date(timeIntervalSince1970: 629_581_266), firstName: "Taylor", lastName: "Swift")
 ]
 
 
-let calendar = Calendar(birthdays: birthdays, events: regularEvents)
+let calendar = CalendarItems(birthdays: birthdays, events: events)
 
-func retrieveDates(calendar: Calendar) -> [Date] {
+func retrieveDates(calendar: CalendarItems) -> [Date] {
     var dates = [Date]()
     
     for event in calendar.events {

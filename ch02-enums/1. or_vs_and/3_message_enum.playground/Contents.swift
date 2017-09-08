@@ -1,28 +1,28 @@
 import Foundation
 
 enum Message {
-    case contents(userId: String, contents: String, date: Date)
-    case draft(userId: String, contents: String, date: Date)
-    case hasJoined(userId: String, date: Date)
-    case hasLeft(userId: String, date: Date)
+    case text(userId: String, contents: String, date: Date)
+    case draft(userId: String, date: Date)
+    case join(userId: String, date: Date)
+    case leave(userId: String, date: Date)
     case balloon(userId: String, date: Date)
 }
 
-let textMessage = Message.contents(userId: "2", contents: "Bonjour!", date: Date())
+let textMessage = Message.text(userId: "2", contents: "Bonjour!", date: Date())
 
-let joinMessage = Message.hasJoined(userId: "2", date: Date())
+let joinMessage = Message.join(userId: "2", date: Date())
 
 
 
 func logMessage(message: Message) {
     switch message {
-    case let .contents(userId: id, contents: contents, date: date):
+    case let .text(userId: id, contents: contents, date: date):
         print("[\(date)] User \(id) sends message: \(contents)")
-    case let .draft(userId: id, contents: contents, date: date):
-        print("[\(date)] User \(id) is drafting a message: \(contents)")
-    case let .hasJoined(userId: id, date: date):
+    case let .draft(userId: id, date: date):
+        print("[\(date)] User \(id) is drafting a message")
+    case let .join(userId: id, date: date):
         print("[\(date)] User \(id) has joined the chatroom")
-    case let .hasLeft(userId: id, date: date):
+    case let .leave(userId: id, date: date):
         print("[\(date)] User \(id) has left the chatroom")
     case let .balloon(userId: id, date: date):
         print("[\(date)] User \(id) is sending balloons")
@@ -34,7 +34,7 @@ logMessage(message: textMessage) // User 2 sends message: Bonjour!
 
 
 
-if case let Message.contents(_, contents: contents, _) = textMessage {
+if case let Message.text(_, contents: contents, _) = textMessage {
     print("Received: \(contents)") // Bonjour!
 }
 
