@@ -24,7 +24,7 @@ struct Cycle {
     let type: CycleType
 }
 
-struct Pushup {
+struct Pushups {
     let repetitions: [Int]
     let date: Date
 }
@@ -34,7 +34,7 @@ let run = Run(id: "3", startTime: Date(), endTime: Date(timeIntervalSinceNow: 36
 
 let cycle = Cycle(id: "4", startTime: Date(), endTime: Date(timeIntervalSinceNow: 3600), distance: 400, incline: 20, type: .mountainBike)
 
-let pushup = Pushup(repetitions: [22,20,10], date: Date())
+let pushups = Pushups(repetitions: [22,20,10], date: Date())
 
 
 
@@ -42,18 +42,18 @@ let pushup = Pushup(repetitions: [22,20,10], date: Date())
 enum Workout {
     case run(Run)
     case cycle(Cycle)
-    case pushup(Pushup)
+    case pushups(Pushups)
 }
 
-let workout = Workout.pushup(pushup)
+let workout = Workout.pushups(pushups)
 
 
 switch workout {
 case .run(let run):
-    print("Run: \run")
+    print("Run: \(run)")
 case .cycle(let cycle):
     print("Cycle: \(cycle)")
-case .pushup(let pushup):
-    print("Pushup: \(pushup)")
+case .pushups(let pushups):
+    print("Pushups: \(pushups)")
 }
 
