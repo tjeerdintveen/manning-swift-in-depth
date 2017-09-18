@@ -10,11 +10,15 @@ struct Pancakes {
     let stackSize: Int
     
     init(syrupType: SyrupType) {
-        self.syrupType
+        self.stackSize = 10
+        self.syrupType = syrupType
     }
+    
 }
 
-// Will this compile? If not, can you make this work?
+//1. Will these work?
 //let pancakes = Pancakes(syrupType: .corn, stackSize: 8)
 //let pancakes = Pancakes(syrupType: .maple)
+
+//2. If these initializers didn't work, can you make them work without adding another initializer?
 

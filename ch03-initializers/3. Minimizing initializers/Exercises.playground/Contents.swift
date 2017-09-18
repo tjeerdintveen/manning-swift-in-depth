@@ -47,9 +47,18 @@ class Television: Device {
         self.screenType = screenType
         super.init(serialNumber: serialNumber, room: room)
     }
-
+    
 }
 
-// Make the following line of code work by adding a single initializer somewhere.
-let firstTelevision = Television(room: "Lobby")
-let secondTelevision = Television(serialNumber: "abc")
+class HandHeldTelevision: Television {
+    let weight: Int
+    
+    init(weight: Int, resolution: Resolution, screenType: ScreenType, serialNumber: String, room: String) {
+        self.weight = weight
+        super.init(resolution: resolution, screenType: screenType, serialNumber: serialNumber, room: room)
+    }
+    
+}
+
+// Add two convenience override initializers in the subclassing hierarchy to make this initializer work from the top-most superclass.
+let handheldTelevision = HandHeldTelevision(serialNumber: "293nr30znNdjW")
