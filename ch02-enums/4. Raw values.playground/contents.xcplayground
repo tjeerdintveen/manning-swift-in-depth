@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Raw value enum'/>
+        <page name='Raw value enum, omit value'/>
+        <page name='Raw value enum, specify single value'/>
+        <page name='Explicit matching'/>
+    </pages>
+</playground>
