@@ -1,4 +1,4 @@
-//: [Previous](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 import Foundation
 
 struct Message {
@@ -13,6 +13,8 @@ struct Message {
     let isSendingBalloons: Bool
 }
 
+//: This message has invalid state. Can't have both "hasJoined" and "hasLeft".
+
 let brokenMessage = Message(userId: "2",
                             contents: "Hi there", // We have text to show
     date: Date(),
@@ -23,4 +25,4 @@ let brokenMessage = Message(userId: "2",
 
 // chatroom.sendMessage(brokenMessage)
 
-//: [Next](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

@@ -1,5 +1,5 @@
-//: [Previous](@previous)
-
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+//: # Exercises
 // Given these classes:
 class Device {
     
@@ -52,8 +52,8 @@ class Television: Device {
     
 }
 
-// Make the following line of code work by adding a single initializer somewhere.
+//: Make the following line of code work by adding a single initializer somewhere.
 let firstTelevision = Television(room: "Lobby")
 let secondTelevision = Television(serialNumber: "abc")
 
-//: [Next](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)

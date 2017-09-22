@@ -1,4 +1,4 @@
-//: [Previous](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 import Foundation
 
 enum Message {
@@ -37,4 +37,5 @@ if case let Message.text(_, contents: contents, _) = textMessage {
     print("Received: \(contents)") // Bonjour!
 }
 
-//: [Next](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
+

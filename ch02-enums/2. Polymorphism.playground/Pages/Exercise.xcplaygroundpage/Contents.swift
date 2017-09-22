@@ -1,6 +1,8 @@
-//: [Previous](@previous)
-
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+//: # Exercise
 import Foundation
+
+//: Given these data types:
 
 enum Permissions {
     case read
@@ -20,7 +22,8 @@ struct Directory {
 let file = File(path: "/usr/swiftindepth/swift.txt", permissions: .read)
 let directory = Directory(path: "/usr/swiftindepth", permissions: .readWrite)
 
-//let filesystem = [?] // What type goes here?
+//: How can we fill one array with both types?
 
+//let filesystem = [?]
 
-//: [Next](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)

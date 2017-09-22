@@ -1,13 +1,16 @@
-//: [Previous](@previous)
-
-//: Playground - noun: a place where people can play
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 
 import UIKit
+/*:
+ ## Creating a Board Game.
 
+Our randomizer function.
+ */
 func random(max: UInt32) -> UInt32 {
     return arc4random_uniform(max)
 }
 
+//: The player type
 struct Player {
     let name: String
     let color: UIColor
@@ -25,6 +28,7 @@ extension Player {
     }
 }
 
+//: The Boardgame class
 class BoardGame {
     let players: [Player]
     let numberOfTiles: Int
@@ -47,6 +51,9 @@ class BoardGame {
     }
 }
 
+//: ## Initializing BoardGame.
+//: Uncomment the initializer you want to use.
+
 // Convenience initializer
 //let boardGame = BoardGame(names: ["Melissa", "SuperJeff", "Dave"])
 
@@ -61,6 +68,4 @@ let players = [
 
 // Designated initializer
 let boardGame = BoardGame(players: players, numberOfTiles: 32)
-
-
-//: [Next](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

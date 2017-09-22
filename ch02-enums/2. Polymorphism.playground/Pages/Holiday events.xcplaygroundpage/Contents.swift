@@ -1,5 +1,4 @@
-//: [Previous](@previous)
-
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 import Foundation
 
 struct Event {
@@ -12,6 +11,8 @@ struct BirthDay {
     let firstName: String
     let lastName: String
 }
+
+//: We add a new holiday case to CalendarItem:
 
 enum CalendarItem {
     case holiday(Event)
@@ -31,7 +32,7 @@ let items: [CalendarItem] = [
     )
 ]
 
-// Uncomment to see error, need to match on holiday type
+//: Uncomment this to see the error. We need to match on holiday type.
 //
 //func retrieveDates(items: [CalendarItem]) -> [Date] {
 //    var dates = [Date]()
@@ -46,4 +47,4 @@ let items: [CalendarItem] = [
 //    return dates
 //}
 
-//: [Next](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

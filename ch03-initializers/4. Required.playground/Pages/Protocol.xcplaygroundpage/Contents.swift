@@ -1,6 +1,11 @@
-//: [Previous](@previous)
-
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 import UIKit
+/*:
+ ## Initializers required by a protocol
+ This playground page demonstrates how initializers are required because of protocols.
+ 
+ First we prepare our data types.
+ */
 
 func random(max: UInt32) -> UInt32 {
     return arc4random_uniform(max)
@@ -22,6 +27,16 @@ extension Player {
                              alpha: 1.0)
     }
 }
+
+/*:
+ ## Introducing a protocol
+ 
+ The BoardGameType protocol has an initializer.
+ 
+ Notice how the designated initializer in BoardGame is now made required.
+ 
+ This is needed to satisfy the BoardGameType protocol (otherwise subclasses wouldn't adhere to the protocol)
+ */
 
 protocol BoardGameType {
     init(players: [Player], numberOfTiles: Int)
@@ -65,10 +80,18 @@ class MutabilityLand: BoardGame {
     }
 }
 
+/*:
+ ## Initializing
+ Now we can initialize MutabilityLand and BoardGame as usual.
+ */
+
 let players = [
     Player(name: "Melissa"),
     Player(name: "SuperJeff"),
     Player(name: "Dave")
 ]
 
-//: [Next](@next)
+let boardGame = BoardGame(players: players, numberOfTiles: 32)
+let mutabilityLand = MutabilityLand(players: players)
+
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

@@ -1,6 +1,12 @@
-//: [Previous](@previous)
-
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 import UIKit
+
+/*:
+ ## Omitting the required keyword
+ This playground page demonstrates how we don't need the required keyword when we make a class final.
+ 
+ First we prepare our data types.
+ */
 
 func random(max: UInt32) -> UInt32 {
     return arc4random_uniform(max)
@@ -22,6 +28,16 @@ extension Player {
                              alpha: 1.0)
     }
 }
+
+/*:
+ ## BoardGame changes
+ Notice how BoardGame adheres to the BoardGameType protocol, but also notice how Boardgame has a factory method called 'makeGame'.
+ 
+ But BoardGame doesn't need required initializers anymore, because it can't be subclassed.
+ 
+ The reason BoardGame can't be subclasses is because BoardGame is now a final class, indicated by the 'final' keyword.
+
+ */
 
 protocol BoardGameType {
     init(players: [Player], numberOfTiles: Int)
@@ -54,5 +70,4 @@ final class BoardGame: BoardGameType {
     }
     
 }
-
-//: [Next](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

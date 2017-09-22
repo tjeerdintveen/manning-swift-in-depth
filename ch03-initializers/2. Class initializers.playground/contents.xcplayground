@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios'>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
+        <page name='Table of contents'/>
         <page name='Boardgame'/>
         <page name='Mutability Land'/>
-        <page name='Mutability Land broken initializer'/>
-        <page name='Mutability Land designated initializer'/>
-        <page name='Mutability Land designated override'/>
+        <page name='Mutability Land with broken initializer'/>
+        <page name='Mutability Land with designated initializer'/>
+        <page name='Mutability Land with designated override'/>
         <page name='Exercises'/>
     </pages>
 </playground>

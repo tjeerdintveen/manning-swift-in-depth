@@ -1,9 +1,12 @@
-//: [Previous](@previous)
-
-//: Playground - noun: a place where people can play
-
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 import UIKit
 
+/*:
+ ## Factory methods
+This playground page demonstrates initializing via factory methods.
+
+First we prepare our data types.
+*/
 func random(max: UInt32) -> UInt32 {
     return arc4random_uniform(max)
 }
@@ -24,6 +27,13 @@ extension Player {
                              alpha: 1.0)
     }
 }
+
+/*:
+ ## Introducing a factory method
+Notice how BoardGame gains the 'makeGame' factory method.
+ 
+Also notice how the initializer 'makeGame' points to, is now a required initialzer because of this.
+*/
 
 class BoardGame {
     let players: [Player]
@@ -68,6 +78,11 @@ class MutabilityLand: BoardGame {
     }
 }
 
+/*:
+ ## Initializing with a factory method
+Both superclasses and subclasses can now be initialized with a factory method
+*/
+
 let players = [
     Player(name: "Melissa"),
     Player(name: "SuperJeff"),
@@ -76,5 +91,4 @@ let players = [
 
 let boardGame = BoardGame.makeGame(players: players)
 let mutabilityLand = MutabilityLand.makeGame(players: players)
-
-//: [Next](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

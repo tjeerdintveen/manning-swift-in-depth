@@ -1,4 +1,7 @@
-//: [Previous](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
+
+//: ## Creating a convenience override
+//: First we prepare the data types.
 
 import UIKit
 
@@ -45,6 +48,12 @@ class BoardGame {
     }
 }
 
+/*:
+ ## MutabilityLand changes
+ 
+ Notice how MutabilityLand contains a convenience override, which points to "self.init" instead of "super.init"
+*/
+
 class MutabilityLand: BoardGame {
     var scoreBoard = [String: Int]()
     var winner: Player?
@@ -60,6 +69,12 @@ class MutabilityLand: BoardGame {
         self.init(players: players, instructions: "Read the manual", numberOfTiles: numberOfTiles)
     }
 }
+
+/*:
+ ## Choose an initializer
+ You can uncomment to see the initializers in action.
+ */
+
 
 let players = [
     Player(name: "Melissa"),
@@ -79,6 +94,4 @@ let mutabilityLand = MutabilityLand(players: players, instructions: "Just read t
 // Designated initializer
 //let mutabilityLand = MutabilityLand(players: players, numberOfTiles: 32)
 
-
-
-//: [Next](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
