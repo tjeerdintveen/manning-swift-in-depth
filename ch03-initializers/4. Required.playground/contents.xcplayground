@@ -5,5 +5,6 @@
         <page name='Factory method'/>
         <page name='Protocol'/>
         <page name='Final class'/>
+        <page name='Exercises'/>
     </pages>
 </playground>

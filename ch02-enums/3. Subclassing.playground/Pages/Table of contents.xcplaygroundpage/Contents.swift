@@ -19,6 +19,7 @@
  
  1. [Struct workouts](Struct%20workouts)
  1. [Workout enum](Workout%20enum)
+ 1. [Exercises](Exercises)
  */
 //: [Next](@next)
 

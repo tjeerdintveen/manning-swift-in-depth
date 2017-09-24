@@ -8,5 +8,6 @@
         <page name='Explicit matching on raw value enum'/>
         <page name='Matching on strings'/>
         <page name='Creating a string type enum'/>
+        <page name='Exercises'/>
     </pages>
 </playground>

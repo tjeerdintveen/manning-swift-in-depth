@@ -19,5 +19,6 @@
  1. [Factory method](Factory%20method)
  1. [Protocol](Protocol)
  1. [Final class](Final%20class)
+ 1. [Exercises](Exercises)
  */
 //: [Next](@next)

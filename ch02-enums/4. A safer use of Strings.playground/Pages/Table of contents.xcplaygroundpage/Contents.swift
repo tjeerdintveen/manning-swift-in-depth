@@ -23,6 +23,7 @@
  1. [Explicit matching on raw value enum](Explicit%20matching%20on%20raw%20value%20enum)
  1. [Matching on strings](Matching%20on%20strings)
  1. [Creating a string type enum](Creating%20a%20string%20type%20enum)
+ 1. [Exercises](Exercises)
  */
 //: [Next](@next)
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
         <page name='Table of contents'/>
         <page name='Calendar separate arrays'/>
         <page name='Calendar enum events'/>
         <page name='Holiday events'/>
-        <page name='Exercise'/>
+        <page name='Exercises'/>
     </pages>
 </playground>

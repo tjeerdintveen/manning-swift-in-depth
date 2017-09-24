@@ -20,7 +20,7 @@
  1. [Calendar with separate arrays](Calendar%20separate%20arrays)
  1. [Calendar with enum events](Calendar%20enum%20events)
  1. [Holiday events](Holiday%20events)
- 1. [Exercise](Exercise)
+ 1. [Exercises](Exercises)
  */
 //: [Next](@next)
 

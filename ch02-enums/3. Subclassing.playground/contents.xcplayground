@@ -4,5 +4,6 @@
         <page name='Table of contents'/>
         <page name='Struct workouts'/>
         <page name='Workout enum'/>
+        <page name='Exercises'/>
     </pages>
 </playground>
