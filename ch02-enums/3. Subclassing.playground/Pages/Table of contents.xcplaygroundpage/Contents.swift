@@ -3,7 +3,9 @@
  # Modeling data with enums
  ## Enums instead of subclassing
  
- Code listings and exercises for Swift in Depth.
+ Code listings and exercises for [Swift in Depth][Swift in Depth].
+ 
+ [Swift in Depth]: https://www.manning.com/books/swift-in-depth
  
  By [Tjeerd in 't Veen][Tjeerd in 't Veen]
  
