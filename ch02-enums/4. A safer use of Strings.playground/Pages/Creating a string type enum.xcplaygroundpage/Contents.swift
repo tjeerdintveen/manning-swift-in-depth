@@ -1,4 +1,4 @@
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 enum ImageType: String {
     case jpg
     case bmp
@@ -15,24 +15,21 @@ enum ImageType: String {
     
 }
 
-
-func logMetadata(for imageType: String) {
-    // Creating the enum
-    guard let type = ImageType(rawValue: imageType) else {
-        print("imagetype unknown")
-        return
+func iconName(for fileExtension: String) -> String {
+    guard let imageType = ImageType(rawValue: fileExtension) else {
+        return "assetIconUnknown"
     }
-    switch type {
-    case .jpg: print("Received a jpg")
-    case .bmp: print("Received a bmp")
-    case .gif: print("Received a gif")
+    switch imageType {
+    case .jpg: return "assetIconJpeg"
+    case .bmp: return "assetIconBitmap"
+    case .gif: return "assetIconGif"
     }
 }
 
-logMetadata(for: "jpg") // "Received jpg"
-logMetadata(for: "jpeg") // "Received jpg"
-logMetadata(for: "JPG") // "Received a jpg"
-logMetadata(for: "JPEG") // "Received a jpg"
-logMetadata(for: "gif") // "Received a gif"
+iconName(for: "jpg") // "Received jpg"
+iconName(for: "jpeg") // "Received jpg"
+iconName(for: "JPG") // "Received a jpg"
+iconName(for: "JPEG") // "Received a jpg"
+iconName(for: "gif") // "Received a gif"
 
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

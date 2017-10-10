@@ -1,4 +1,4 @@
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 import Foundation // We need foundation for the Date type.
 
 struct Run {
@@ -58,4 +58,4 @@ case .pushups(let pushups):
     print("Pushups: \(pushups)")
 }
 
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

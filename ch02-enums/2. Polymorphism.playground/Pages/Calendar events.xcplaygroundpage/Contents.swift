@@ -1,4 +1,7 @@
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
+
+//: # Calendar events
+
 import Foundation
 //: First we structure the data types.
 struct Event {

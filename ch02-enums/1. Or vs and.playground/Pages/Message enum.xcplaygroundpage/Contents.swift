@@ -1,4 +1,7 @@
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
+
+//: # Message as an enum
+
 import Foundation
 
 enum Message {

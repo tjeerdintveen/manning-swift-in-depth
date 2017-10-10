@@ -63,5 +63,7 @@ components.day = 4
 components.month = 7
 components.year = 1938
 let billWithers = Artist(name: "Bill Withers", birthDate: Calendar.current.date(from: components)!, songs: [aintNoSunshine, lovelyday])
+billWithers.getAge()
+billWithers.summary()
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous)

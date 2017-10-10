@@ -1,4 +1,4 @@
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 //: # Exercise
 //: Given these classes:
 class Device {
@@ -65,4 +65,4 @@ class HandHeldTelevision: Television {
 //: Add two convenience override initializers in the subclassing hierarchy to make this initializer from the top-most superclass work.
 let handheldTelevision = HandHeldTelevision(serialNumber: "293nr30znNdjW")
 
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

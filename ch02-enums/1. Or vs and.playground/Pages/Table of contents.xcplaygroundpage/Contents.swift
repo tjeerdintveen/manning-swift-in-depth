@@ -20,8 +20,9 @@
  ## Table of Contents
  
  1. [Message](Message)
- 1. [A broken message](Message%20broken)
+ 1. [An invalid message](Message%20invalid)
  1. [Message as an enum](Message%20enum)
  1. [Exercises](Exercises)
+ 1. [Answers](Answers)
  */
 //: [Next](@next)

@@ -3,8 +3,9 @@
     <pages>
         <page name='Table of contents'/>
         <page name='Message'/>
-        <page name='Message broken'/>
+        <page name='Message invalid'/>
         <page name='Message enum'/>
         <page name='Exercises'/>
+        <page name='Answers'/>
     </pages>
 </playground>

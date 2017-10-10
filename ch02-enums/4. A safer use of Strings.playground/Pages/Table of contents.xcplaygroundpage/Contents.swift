@@ -26,6 +26,7 @@
  1. [Matching on strings](Matching%20on%20strings)
  1. [Creating a string type enum](Creating%20a%20string%20type%20enum)
  1. [Exercises](Exercises)
+ 1. [Answers](Answers)
  */
 //: [Next](@next)
 

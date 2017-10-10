@@ -19,10 +19,10 @@
  
  ## Table of Contents
  
- 1. [Calendar with separate arrays](Calendar%20separate%20arrays)
- 1. [Calendar with enum events](Calendar%20enum%20events)
- 1. [Holiday events](Holiday%20events)
+ 1. [Calendar events](Calendar%20events)
+ 1. [Adding a holiday event](Adding%20a%20holiday%20event)
  1. [Exercises](Exercises)
+ 1. [Answers](Answers)
  */
 //: [Next](@next)
 

@@ -2,9 +2,9 @@
 <playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
         <page name='Table of contents'/>
-        <page name='Calendar separate arrays'/>
-        <page name='Calendar enum events'/>
-        <page name='Holiday events'/>
+        <page name='Calendar events'/>
+        <page name='Adding a holiday event'/>
         <page name='Exercises'/>
+        <page name='Answers'/>
     </pages>
 </playground>

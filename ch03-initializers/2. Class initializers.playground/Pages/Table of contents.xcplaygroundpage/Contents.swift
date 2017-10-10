@@ -23,6 +23,7 @@
  1. [Mutability Land with broken initializer](Mutability%20Land%20with%20broken%20initializer)
  1. [Mutability Land with designated initializer](Mutability%20Land%20with%20designated%20initializer)
  1. [Mutability Land with designated override](Mutability%20Land%20with%20designated%20override)
- 1. [Exercises](Exercises)
+ 1. [Exercise](Exercise)
+ 1. [Answer](Answer)
  */
 //: [Next](@next)

@@ -1,4 +1,4 @@
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 /*:
  # Exercises property observers
  
@@ -23,4 +23,6 @@ let tweet = Tweet(date: Date(),
                   author: "@tjeerdintveen",
                   message: "This has a lot of unnecessary whitespace   ")
 
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
+tweet.message.count
+
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

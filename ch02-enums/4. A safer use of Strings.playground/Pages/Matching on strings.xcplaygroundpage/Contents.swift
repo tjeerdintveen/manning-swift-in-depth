@@ -1,26 +1,15 @@
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 
-enum ImageType: String {
-    case jpg
-    case bmp
-    case gif
-}
-
-func logMetadata(for imageType: String) {
-    // Creating the enum
-    guard let type = ImageType(rawValue: imageType) else {
-        print("imagetype unknown")
-        return
-    }
-    switch type {
-    case .jpg: print("Received a jpg")
-    case .bmp: print("Received a bmp")
-    case .gif: print("Received a gif")
+func iconName(for fileExtension: String) -> String {
+    switch fileExtension {
+    case "jpg": return "assetIconJpeg"
+    case "bmp": return "assetIconBitmap"
+    case "gif": return "assetIconGif"
+    default: return "assetIconUnknown"
     }
 }
 
-logMetadata(for: "jpg") // "Received jpg"
-
-logMetadata(for: "JPG") // Bug: imagetype unknown
+iconName(for: "jpg") // "assetIconJpeg"
+iconName(for: "JPG") // "assetIconUnknown", not favorable.
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

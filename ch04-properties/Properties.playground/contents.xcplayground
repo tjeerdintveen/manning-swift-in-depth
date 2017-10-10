@@ -6,6 +6,7 @@
         <page name='Run with computed properties'/>
         <page name='Run with computed properties setter'/>
         <page name='Exercises computed properties'/>
+        <page name='Answers computed properties'/>
         <page name='Healthplan not lazy'/>
         <page name='Healthplan lazy'/>
         <page name='Healthplan breaking lazy'/>
@@ -13,8 +14,10 @@
         <page name='Healthplan lazy loading before copying'/>
         <page name='Healthplan lazy loading after copying'/>
         <page name='Exercises lazy properties'/>
+        <page name='Answers lazy properties'/>
         <page name='Property observer'/>
         <page name='Property observer initializer'/>
         <page name='Exercises property observers'/>
+        <page name='Answers property observers'/>
     </pages>
 </playground>
