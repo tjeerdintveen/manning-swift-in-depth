@@ -4,27 +4,19 @@ import Foundation
 
 //: # Optional boolean nil coalescing
 
+//: ## Falling back to false
+
 let preferences = ["autoLogin": true, "faceIdEnabled": true]
+print(preferences["faceIdEnabled"]) // Optional(true)
 let isFaceIdEnabled = preferences["faceIdEnabled"] ?? false
-
-
+print(isFaceIdEnabled) // Now a Bool instead of Optional(Bool)
 //: ## Falling back on true
 
-func loadContents(url: URL) -> Data? {
-    var data = try? Data(contentsOf: url)
-    
-    if data?.isEmpty ?? true {
-        let fileURL = Bundle.main.url(forResource: "default", withExtension: "txt")
-        // Normally force unwrapping is ill advised, more on that later.
-        data = try? Data(contentsOf: fileURL!)
-    }
-    
-    return data
+if preferences["faceIdEnabled"] ?? true {
+    // go to Face ID settings screen.
+} else {
+    // customer has disabled Face ID
 }
-
-let url = Bundle.main.url(forResource: "hello", withExtension: "txt")
-let result = loadContents(url: url!)
-
 
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

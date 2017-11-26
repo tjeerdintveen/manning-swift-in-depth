@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='Table of contents'/>
+        <page name='Enums instead of subclassing'/>
+        <page name='Enums instead of subclassing Workout type'/>
+        <page name='Polymorphism'/>
+        <page name='Message as a struct'/>
+        <page name='An invalid Message'/>
+        <page name='Message as an enum'/>
+        <page name='Algebraic data types'/>
+        <page name='Raw value enum'/>
+        <page name='Raw value enum with values omitted'/>
+        <page name='Raw value enum with single value specified'/>
+        <page name='Explicit matching on raw value enum'/>
+        <page name='Matching on strings'/>
+        <page name='Creating a string type enum'/>
+        <page name='Exercises'/>
+        <page name='Answers'/>
+    </pages>
+</playground>

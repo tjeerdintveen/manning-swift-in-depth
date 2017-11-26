@@ -29,11 +29,11 @@ struct Customer {
         }
     }
     
-    let favoriteArticle: Article?
+    let favoriteProduct: Product?
     
 }
 
-struct Article {
+struct Product {
     let id: String
     let name: String
     let image: UIImage?
@@ -41,21 +41,17 @@ struct Article {
 
 let url = Bundle.main.url(forResource: "mayo", withExtension: "jpg")
 //: We normally won't force unwrap this.
-let imageData = try! Data(contentsOf: url!)
-let articleImage = UIImage(data: imageData)
+let imageData = try! Data(contentsOf: url!) // We normally won't force unwrap this
 
-let anotherImage = articleImage
+let product = Product(id: "3", name: "Hellmann's", image: UIImage(data: imageData))
 
-let article = Article(id: "9482", name: "Gourmet truffle mayonaise", image: articleImage)
-
-let customer = Customer(id: "30", email: "famthompson@gmail.com", firstName: nil, lastName: "Thompson", balance: 300, membership: .gold, favoriteArticle: article)
+let customer = Customer(id: "2", email: "fake@customer.com", firstName: "Jeff", lastName: nil, balance: 2000, membership: nil, favoriteProduct: product)
 
 let imageView = UIImageView()
-//: Optional chaining
-imageView.image = customer.favoriteArticle?.image
+imageView.image = customer.favoriteProduct?.image
 
 //: Optional chaining with nil coalescing
-imageView.image = customer.favoriteArticle?.image ?? UIImage(named: "missing_image")
+imageView.image = customer.favoriteProduct?.image ?? UIImage(named: "missing_image")
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 
