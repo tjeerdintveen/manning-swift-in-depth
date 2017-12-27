@@ -33,7 +33,44 @@ let moviesAndRatings: [String : Float] = ["Home Alone 4" : 1.2, "Who framed Roge
 let moviesHumanRadable = transformRating(moviesAndRatings)
 print(moviesHumanRadable) // ["Home Alone 4": "Weak", "Star Wars: The Phantom Menace": "Average", "Who framed Roger Rabbit?": "Excellent", "The Shawshank Redemption": "Excellent"]
 
-//: 3. Generate an array of the letters "a", "b", "c" 10 times. The end result should be ["a", "b", "c", "a", "b", "c", "a" ... etc. The array should be 30 elements long. See if you can solve this with a map operation on some kind of iterator.
+//: 3. Given a contact data dictionary, the following code gets the street and city from the data and cleans up the strings. See if you can reduce the boilerplate, be sure to use map somewhere.
+
+
+let contact =
+    ["address":
+        
+        [
+            "zipcode": "12345",
+            "street": "broadway",
+            "city": "wichita"
+        ]
+        
+]
+
+func capitalizedAndTrimmed(_ string: String) -> String {
+    return string.trimmingCharacters(in: .whitespaces).capitalized
+}
+
+var capitalizedStreet: String? = nil
+var capitalizedCity: String? = nil
+
+if let address = contact["address"] {
+    if let street = address["street"] {
+        capitalizedStreet = capitalizedAndTrimmed(street.capitalized)
+    }
+    if let city = address["city"] {
+        capitalizedCity = capitalizedAndTrimmed(city.capitalized)
+    }
+}
+
+print(capitalizedStreet) // Broadway
+print(capitalizedCity) // Wichita
+
+//: Cleaned up:
+let someStreet = contact["address"]?["street"].map(capitalizedAndTrimmed)
+let someCity = contact["address"]?["city"].map(capitalizedAndTrimmed)
+
+//: 4. Generate an array of the letters "a", "b", "c" 10 times. The end result should be ["a", "b", "c", "a", "b", "c", "a" ... etc. The array should be 30 elements long. See if you can solve this with a map operation on some kind of iterator.
 
 let values = (0..<30).map { (int: Int) -> String in
     switch int % 3 {
@@ -46,7 +83,7 @@ let values = (0..<30).map { (int: Int) -> String in
 
 print(values)
 
-//: 4. Back to the movies and ratings, convert the dictionary into a single description per movie with the rating appended to the title.
+//: 5. Back to the movies and ratings, convert the dictionary into a single description per movie with the rating appended to the title.
 
 let movies: [String : Float] = ["Home Alone 4" : 1.2, "Who framed Roger Rabbit?" : 4.6, "Star Wars: The Phantom Menace" : 2.2, "The Shawshank Redemption" : 4.9]
 
@@ -67,8 +104,9 @@ let movieDescriptions = movies.map { (tuple) in
 
 print(movieDescriptions) // ["Home Alone 4 (Weak)", "Star Wars: The Phantom Menace (Average)", "Who framed Roger Rabbit? (Excellent)", "The Shawshank Redemption (Excellent)"]
 
-// 5: Create a function that turns an array of integers, such as [20, 30, 40] into an array with a value subtracted and added for each integers. Such as: [19, 20, 21, 29, 30, 31, 39, 40, 41]
-// Try to solve it with the help of map or flatMap.
+// 5. Create a function that turns an array of integers, into an array with a value subtracted and added for each integer.
+//: For instance [20, 30, 40] will be turned into [19, 20, 21, 29, 30, 31, 39, 40, 41]
+//: Try to solve it with the help of map or flatMap.
 
 func buildList(_ values: [Int]) -> [Int] {
     return values.flatMap {
@@ -78,7 +116,7 @@ func buildList(_ values: [Int]) -> [Int] {
 
 print(buildList([20,30,40]))
 
-// 6: Generate values from 0 to 100, with only even numbers. But be sure to skip every factor of ten. Such as 10, 20, etc. You would end up with [2, 4, 6, 8, 12, 14, 16, 18, 22 ... etc
+// 6. Generate values from 0 to 100, with only even numbers. But be sure to skip every factor of ten. Such as 10, 20, etc. You would end up with [2, 4, 6, 8, 12, 14, 16, 18, 22 ... etc
 // See if you can solve it with the help of map or flatMap.
 
 let strideSequence = stride(from: 0, through: 30, by: 2).flatMap { int in
@@ -86,7 +124,7 @@ let strideSequence = stride(from: 0, through: 30, by: 2).flatMap { int in
 }
 print(strideSequence)
 
-// 7: Create a function that removes all vowels from a string. Again, see if you can solve it with map or flatMap.
+//: 7. Create a function that removes all vowels from a string. Again, see if you can solve it with map or flatMap.
 
 func removeVowels(_ string: String) -> String {
     let characters = string.flatMap { char -> Character? in
@@ -101,7 +139,7 @@ func removeVowels(_ string: String) -> String {
 
 removeVowels("Hi there!") // H thr!
 
-// 8: Given an array of tuples, create an array with tuples of all possible tuple pairs of these values, e.g. [1,2] gets turned into [(1, 1), (1, 2), (2, 1), (2, 2)]. Again, see if you can do it with the help from map and/or flatMap.
+//: 8. Given an array of tuples, create an array with tuples of all possible tuple pairs of these values, e.g. [1,2] gets turned into [(1, 1), (1, 2), (2, 1), (2, 2)]. Again, see if you can do it with the help from map and/or flatMap.
 
 func pairValues(_ values: [Int]) -> [(Int, Int)] {
     return values.flatMap { lhs in
@@ -113,5 +151,17 @@ func pairValues(_ values: [Int]) -> [(Int, Int)] {
 
 print(pairValues([1,2]))
 
-//: [Next](@next)
+//: 9. Write a function that duplicates each value inside an array. See if you can use map or flatMap for this.
+//: E.g., [1,2,3] turns into [1, 1, 2, 2, 3, 3] and [["a", "b"],["c", "d"]], turns into [["a", "b"], ["a", "b"], ["c", "d"], ["c", "d"]]
 
+
+
+func double<T>(_ values: [T]) -> [T] {
+    return values.flatMap { [$0, $0] }
+}
+
+print(double([1,2,3]))
+print(double([["a", "b"], ["c", "d"]]))
+
+
+//: [Next](@next)

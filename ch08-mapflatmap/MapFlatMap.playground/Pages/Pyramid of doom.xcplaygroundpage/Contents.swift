@@ -37,4 +37,24 @@ if let halvedValue = half(startValue) {
 
 print(value) // Optional(5)
 
+var endValue: Int? = nil
+
+if
+    let firstHalf = half(startValue),
+    let secondHalf = half(firstHalf),
+    let thirdHalf = half(secondHalf),
+    let fourthHalf = half(thirdHalf) {
+    endValue = fourthHalf
+}
+print(endValue) // Optional(5)
+
+let endResult =
+    half(startValue)
+        .flatMap(half)
+        .flatMap(half)
+        .flatMap(half)
+
+print(endResult) // Optional(5)
+
+
 //: [Next](@next)
