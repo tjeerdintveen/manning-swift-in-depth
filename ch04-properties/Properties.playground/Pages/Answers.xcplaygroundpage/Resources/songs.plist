@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>artist</key>
+		<string>Bill Withers</string>
+		<key>track</key>
+		<string>Ain&apos;t no sunshine</string>
+		<key>year</key>
+		<integer>1971</integer>
+		<key>duration</key>
+		<integer>125</integer>
+	</dict>
+	<dict>
+		<key>artist</key>
+		<string>Bill Withers</string>
+		<key>track</key>
+		<string>Lovely day</string>
+		<key>year</key>
+		<integer>1977</integer>
+		<key>duration</key>
+		<integer>253</integer>
+	</dict>
+</array>
+</plist>
