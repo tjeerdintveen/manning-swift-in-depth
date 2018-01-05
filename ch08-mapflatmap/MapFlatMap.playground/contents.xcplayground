@@ -14,5 +14,6 @@
         <page name='Monad laws'/>
         <page name='Optionals inside arrays'/>
         <page name='Exercises and answers'/>
+        <page name='Col'/>
     </pages>
 </playground>
