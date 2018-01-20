@@ -2,6 +2,7 @@
 <playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
     <pages>
         <page name='Table of contents'/>
+        <page name='Errors'/>
         <page name='Clean error handling'/>
     </pages>
 </playground>
