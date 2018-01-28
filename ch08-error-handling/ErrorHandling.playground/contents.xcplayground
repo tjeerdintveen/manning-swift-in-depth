@@ -4,5 +4,12 @@
         <page name='Table of contents'/>
         <page name='Errors'/>
         <page name='Clean error handling'/>
+        <page name='Keeping predictable state'/>
+        <page name='Technical details'/>
+        <page name='Custom type'/>
+        <page name='Propagation'/>
+        <page name='Delivering pleasant APIs'/>
+        <page name='Result'/>
+        <page name='Result part two'/>
     </pages>
 </playground>
