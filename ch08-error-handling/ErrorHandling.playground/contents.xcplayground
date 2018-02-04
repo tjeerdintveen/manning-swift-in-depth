@@ -9,7 +9,13 @@
         <page name='Custom type'/>
         <page name='Propagation'/>
         <page name='Delivering pleasant APIs'/>
-        <page name='Result'/>
-        <page name='Result part two'/>
+        <page name='Result introduction'/>
+        <page name='Asynchronous calls'/>
+        <page name='Exercises'/>
+        <page name='iTunes api step 1 call url cocoa touch style'/>
+        <page name='iTunes api step 2 call url with result'/>
+        <page name='iTunes api step 3 add search'/>
+        <page name='iTunes api step 4 map'/>
+        <page name='iTunes api step 5 flatMap'/>
     </pages>
 </playground>

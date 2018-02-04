@@ -24,7 +24,7 @@ struct Location {
 ///   - latitude: A string containing a latitude value
 ///   - longitude: A string containing a longitude value
 /// - Returns: A Location struct
-/// - Throws: Can throw a ParseLocationError.invalidData error
+/// - Throws: Will throw a ParseLocationError.invalidData if lat and long can't be converted to Double.
 func parseLocation(_ latitude: String, _ longitude: String) throws -> Location {
     guard let latitude = Double(latitude), let longitude = Double(longitude) else {
         throw ParseLocationError.invalidData
@@ -34,7 +34,7 @@ func parseLocation(_ latitude: String, _ longitude: String) throws -> Location {
 }
 
 do {
-    try parseLocation("I am not a double", "110") <2>
+    try parseLocation("I am not a double", "110")
 } catch {
     print(error) // invalidData <1>
 }
