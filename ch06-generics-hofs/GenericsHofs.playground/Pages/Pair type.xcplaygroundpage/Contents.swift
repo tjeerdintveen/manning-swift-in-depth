@@ -2,9 +2,7 @@
 
 import UIKit
 
-//: # Pair type complete
-
-//: ## Pair
+//: # Pair type
 
 struct Pair<T: Hashable, U: Hashable>: Hashable {
     let left: T
@@ -27,7 +25,6 @@ struct Pair<T: Hashable, U: Hashable>: Hashable {
     }
     
 }
-
 //: ## Hasher
 //: A hashing algorithm
 

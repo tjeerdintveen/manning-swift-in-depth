@@ -7,8 +7,7 @@
         <page name='Generic constrained function'/>
         <page name='Conforming to Comparable'/>
         <page name='Multiple constraints'/>
-        <page name='Pair type simple'/>
-        <page name='Pair type complete'/>
+        <page name='Pair type'/>
         <page name='Hash collission test'/>
         <page name='Exercises and answers'/>
     </pages>
