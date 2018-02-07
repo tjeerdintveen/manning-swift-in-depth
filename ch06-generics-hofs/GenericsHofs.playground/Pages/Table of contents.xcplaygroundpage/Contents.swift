@@ -21,7 +21,14 @@
  
  ## Table of Contents
  
- 1. [Documentation](Documentation)
-  */
+ 1. [Higher order functions](Higher%20order%20functions)
+ 1. [Generic function](Generic%20function)
+ 1. [Generic constrained function](Generic%20constrained%20function)
+ 1. [Conforming to Comparable](Conforming%20to%20Comparable)
+ 1. [Multiple constraints](Multiple%20constraints)
+ 1. [Pair type](Pair%20type)
+ 1. [Hash collission test](Hash%20collission%20test)
+ 1. [Exercises and answers](Exercises%20and%20answers)
+ */
 //: [Next](@next)
 

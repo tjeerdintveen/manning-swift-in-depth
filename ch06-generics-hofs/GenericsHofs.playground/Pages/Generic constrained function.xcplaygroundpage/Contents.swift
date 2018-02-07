@@ -4,6 +4,7 @@ import Foundation
 
 //: # Generic constrained function
 
+//: Elaborate function body
 /// Returns the lowest value inside an array, determined by comparable.
 ///
 /// - Parameter array: AN array of values
@@ -14,6 +15,8 @@ import Foundation
 //    }
 //    return sortedArray.first
 //}
+
+//: Short function body
 
 func lowest<T: Comparable>(_ array: [T]) -> T? {
     return array.sorted().first
