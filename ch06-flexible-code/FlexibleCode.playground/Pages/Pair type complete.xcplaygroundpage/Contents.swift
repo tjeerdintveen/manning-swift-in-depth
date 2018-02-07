@@ -27,7 +27,6 @@ struct Pair<T: Hashable, U: Hashable>: Hashable {
     }
     
 }
-
 //: ## Hasher
 //: A hashing algorithm
 
