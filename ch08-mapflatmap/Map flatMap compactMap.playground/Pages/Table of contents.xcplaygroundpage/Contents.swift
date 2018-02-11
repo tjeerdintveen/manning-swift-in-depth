@@ -1,6 +1,6 @@
 /*:
  
- # Modeling data with enums
+ # Map, flatMap, and compactMap
 
  Code listings and exercises for [Swift in Depth][Swift in Depth].
  
