@@ -26,14 +26,7 @@
  1. [Propagation](Propagation)
  1. [Delivering pleasant APIs](Delivering%20pleasant%20APIs)
  1. [Custom type](Custom%20type)
- 1. [Result introduction](Result%20introduction)
- 1. [Asynchronous calls](Asynchronous%20calls)
- 1. [iTunes api step 1 call url cocoa touch style](iTunes%20api%20step%201%20call%20url%20cocoa%20touch%20style)
- 1. [iTunes api step 2 call url with result](iTunes%20api%20step%202%20call%20url%20with%20result)
- 1. [iTunes api step 3 add search](iTunes%20api%20step%203%20add%20search)
- 1. [iTunes api step 4 mapping](iTunes%20api%20step%204%20mapping)
- 1. [iTunes api step 5 flatMap](iTunes%20api%20step%205%20flatMap)
- 
+
   */
 //: [Next](@next)
 
