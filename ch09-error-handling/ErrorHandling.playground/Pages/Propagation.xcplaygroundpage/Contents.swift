@@ -51,6 +51,24 @@ extension ParseRecipeError: LocalizedError {
 
 }
 
+extension ParseRecipeError: CustomNSError {
+    static var errorDomain: String { return "com.recipeextractor" }
+    
+    var errorCode: Int { return 300 }
+    
+    var errorUserInfo: [String: Any] {
+        return [
+            NSLocalizedDescriptionKey: errorDescription ?? "",
+            NSLocalizedFailureReasonErrorKey: failureReason ?? "",
+            NSLocalizedRecoverySuggestionErrorKey: recoverySuggestion ?? ""
+        ]
+    }
+}
+
+let nsError: NSError = ParseRecipeError.parseError(line: 3, symbol: "#") as NSError
+print(nsError)
+
+
 import UIKit
 
 struct ErrorHandler {
@@ -69,10 +87,6 @@ struct ErrorHandler {
         } else {
             presentToUser(message: genericMessage)
         }
-    }
-    
-    func handleError(_ error: NSError) {
-        presentToUser(message: error.localizedDescription)
     }
     
     func presentToUser(message: String) {
