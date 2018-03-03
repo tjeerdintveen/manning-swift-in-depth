@@ -1,6 +1,6 @@
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 
-//: # iTunes api step 5: flatMap
+//: # iTunes api step 7: Happy path (won't run, just an example)
 
 import Foundation
 import PlaygroundSupport
@@ -73,17 +73,24 @@ func search(term: String, completionHandler: @escaping (SearchResult<JSON>) -> V
             result
                 // Transform error type to SearchResultError
                 .mapError { (networkError: NetworkError) -> SearchResultError in
-                    return SearchResultError.underlyingError(networkError)
+                    ...
                 }
                 // Parse Data to JSON, or return SearchResultError
                 .flatMap { (data: Data) -> SearchResult<JSON> in
-                    guard
-                        let json = try? JSONSerialization.jsonObject(with: data, options: []),
-                        let jsonDictionary = json as? JSON else {
-                            return SearchResult(.invalidData) // Parsing failed, we now create a failing SearchResult.
-                    }
-                    
-                    return SearchResult(jsonDictionary)
+                    ...
+                }
+                // validate Data
+                .flatMap { (json: JSON) -> SearchResult<JSON> in
+                    ...
+                }
+                // filter values
+                .map { (json: JSON) -> [JSON] in
+                    ...
+                }
+                // Save to database
+                .flatMap { (mediaItems: [JSON]) -> SearchResult<JSON> in
+                    ...
+                    database.store()
         }
         
         completionHandler(convertedResult)

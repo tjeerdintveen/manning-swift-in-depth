@@ -1,6 +1,6 @@
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 
-//: # iTunes api step 5: flatMap
+//: # iTunes api step 6: Throwing inside Result
 
 import Foundation
 import PlaygroundSupport
@@ -34,6 +34,9 @@ extension Result {
     
 }
 
+//: # Implementing Result
+
+//: ## Lower level API call to make network requests
 
 enum NetworkError: Error {
     case fetchFailed(Error)
@@ -49,6 +52,7 @@ func callURL(with url: URL, completionHandler: @escaping (Result<Data, NetworkEr
     task.resume()
 }
 
+//: ## Higher level API call to Search
 
 enum SearchResultError: Error {
     case invalidTerm(String)
@@ -59,6 +63,19 @@ enum SearchResultError: Error {
 typealias SearchResult<Value> = Result<Value, SearchResultError>
 typealias JSON = [String: Any]
 
+enum ParsingError: Error {
+    case couldNotParseJSON
+}
+
+func parseData(_ data: Data) throws -> JSON {
+    guard
+        let json = try? JSONSerialization.jsonObject(with: data, options: []),
+        let jsonDictionary = json as? JSON else {
+            throw ParsingError.couldNotParseJSON
+    }
+    return jsonDictionary
+}
+
 func search(term: String, completionHandler: @escaping (SearchResult<JSON>) -> Void) {
     let cleanedTerm = term.components(separatedBy: .whitespacesAndNewlines).joined().lowercased()
     let path = "https://itunes.apple.com/search?term=" + cleanedTerm
@@ -68,31 +85,31 @@ func search(term: String, completionHandler: @escaping (SearchResult<JSON>) -> V
     }
     
     callURL(with: url) { result in
-        
         let convertedResult: SearchResult<JSON> =
             result
-                // Transform error type to SearchResultError
-                .mapError { (networkError: NetworkError) -> SearchResultError in
-                    return SearchResultError.underlyingError(networkError)
-                }
-                // Parse Data to JSON, or return SearchResultError
+                .mapError { SearchResultError.underlyingError($0) }
                 .flatMap { (data: Data) -> SearchResult<JSON> in
-                    guard
-                        let json = try? JSONSerialization.jsonObject(with: data, options: []),
-                        let jsonDictionary = json as? JSON else {
-                            return SearchResult(.invalidData) // Parsing failed, we now create a failing SearchResult.
+                    do {
+                        // Catch if the parseData method throws some error.
+                        let searchResult: SearchResult<JSON> = Result(try parseData(data))
+                        return searchResult
+                    } catch {
+                        // We ignore any errors that parseData throws and revert to SearchResultError
+                        return SearchResult(.invalidData)
                     }
-                    
-                    return SearchResult(jsonDictionary)
         }
         
         completionHandler(convertedResult)
     }
 }
 
+//: ## Calling the search API
+
 search(term: "Iron man") { (result: SearchResult<JSON>) in
     print(result)
 }
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
+
+
 

@@ -2,18 +2,16 @@
 <playground version='6.0' target-platform='ios' display-mode='rendered' executeOnSourceChanges='false'>
     <pages>
         <page name='Table of contents'/>
-        <page name='Errors'/>
-        <page name='Keeping predictable state'/>
-        <page name='Propagation'/>
-        <page name='Delivering pleasant APIs'/>
-        <page name='Custom type'/>
-        <page name='Result introduction'/>
-        <page name='Asynchronous calls'/>
         <page name='iTunes api step 1 call url cocoa touch style'/>
         <page name='iTunes api step 2 call url with result'/>
         <page name='iTunes api step 3 add search'/>
         <page name='iTunes api step 4 mapping'/>
         <page name='iTunes api step 5 flatMap'/>
-        <page name='Exercises'/>
+        <page name='iTunes api step 6 throwing inside Result'/>
+        <page name='iTunes api step 7 happy path'/>
+        <page name='iTunes api step 8 AnyError'/>
+        <page name='Exercise 1'/>
+        <page name='Exercises 2 3 and 4'/>
+        <page name='Exercise 5'/>
     </pages>
 </playground>

@@ -7,7 +7,6 @@ import PlaygroundSupport
 
 PlaygroundPage.current.needsIndefiniteExecution = true
 
-
 func callURL(with url: URL, completionHandler: @escaping (Data?, Error?) -> Void) {
     let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
         completionHandler(data, error)
