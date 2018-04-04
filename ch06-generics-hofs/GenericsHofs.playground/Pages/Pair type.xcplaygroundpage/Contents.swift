@@ -10,11 +10,15 @@ struct Pair<T: Hashable, U: Hashable>: Hashable {
     
     let hashFunction: (T, U) -> Int
     
-    var hashValue: Int {
-        return hashFunction(left, right)
+    static func defaultHashFunction(_ lhs: T, _ rhs: U) -> Int {
+        return lhs.hashValue ^ rhs.hashValue &* 16777619
     }
     
-    init(_ left: T, _ right: U, hashFunction: @escaping (T, U) -> Int = Hasher.calculateHash) {
+    var hashValue: Int {
+        return Pair<T, U>.defaultHashFunction(left, right)
+    }
+    
+    init(_ left: T, _ right: U, hashFunction: @escaping (T, U) -> Int = defaultHashFunction) {
         self.left = left
         self.right = right
         self.hashFunction = hashFunction
@@ -25,21 +29,9 @@ struct Pair<T: Hashable, U: Hashable>: Hashable {
     }
     
 }
-//: ## Hasher
-//: A hashing algorithm
 
-struct Hasher {
-    
-    static func calculateHash<T: Hashable, U: Hashable>(lhs: T, rhs: U) -> Int {
-        var result = 17
-        result = 37 &* result &+ lhs.hashValue
-        result = 37 &* result &+ rhs.hashValue
-        return result
-    }
-    
-}
 
-//: Default back to the calculateHash function
+//: Default back to the defaultHashFunction
 let defaultPair = Pair("Age", 30)
 
 //: Use a custom function to combine hash values, such as the XOR operator
