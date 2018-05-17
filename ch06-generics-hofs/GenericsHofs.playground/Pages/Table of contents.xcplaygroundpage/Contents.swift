@@ -21,7 +21,6 @@
  
  ## Table of Contents
  
- 1. [Higher order functions](Higher%20order%20functions)
  1. [Generic function](Generic%20function)
  1. [Generic constrained function](Generic%20constrained%20function)
  1. [Conforming to Comparable](Conforming%20to%20Comparable)

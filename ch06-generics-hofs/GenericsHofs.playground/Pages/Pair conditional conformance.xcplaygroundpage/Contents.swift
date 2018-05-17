@@ -15,8 +15,9 @@ struct Pair<T: Hashable, U: Hashable>: Hashable {
     
 }
 
-let sesamestreet: Pair<String, String> = Pair("Bert", "Ernie")
-let muppets = Pair("Kermit", "Ms Piggy")
-let set: Set = [sesamestreet, muppets]
+let set: Set = [
+    Pair("Laurel", "Hardy"),
+    Pair("Harry", "Lloyd")
+]
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

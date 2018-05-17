@@ -2,35 +2,36 @@
 
 import Foundation
 
-//: # Generic function
-
-/// All indicates if all elements inside an array conform to a predicate.
-///
-/// - Parameters:
-///   - array: An array of values
-///   - predicate: A closure which returns true or false, if each element conforms.
-/// - Returns: A boolean indicating all or nothing conform to a predicate.
-func all<T>(array: [T], predicate: (T) -> Bool) -> Bool {
-    for element in array {
-        if !predicate(element) {
-            return false
-        }
-    }
-    
-    return true
+func firstLast(array: [Int]) -> (Int, Int) {
+    return (array[0], array[array.count-1])
 }
 
-let numbers = [5,6,7,8,9]
-let allMoreThanFour = all(array: numbers) { (int: Int) -> Bool in
-    return int > 4
-}
-print(allMoreThanFour) // true
+let (first, last) = firstLast(array: [1,2,3,4,5])
+print(first) // 1
+print(last) // 5
 
-let strings = ["Jay", "Jeff", "John"]
-let allStartWithJ = all(array: strings) { (string: String) -> Bool in
-    guard let char = string.first else { return false }
-    return char == "j" || char == "J"
+func firstLast(array: [String]) -> (String, String) {
+    return (array[0], array[array.count-1])
 }
-print(allStartWithJ) // true
+
+
+//: ## Generic function
+
+func firstLast<T>(array: [T]) -> (T, T) {
+    return (array[0], array[array.count-1])
+}
+
+struct Waffle {
+    let size: String
+}
+
+let (firstWaffle, lastWaffle) = firstLast(array: [
+    Waffle(size: "large"),
+    Waffle(size: "extra-large"),
+    Waffle(size: "snack-size")
+    ])
+
+print(firstWaffle) // Waffle(size: "large")
+print(lastWaffle) // Waffle(size: "snack-size")
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

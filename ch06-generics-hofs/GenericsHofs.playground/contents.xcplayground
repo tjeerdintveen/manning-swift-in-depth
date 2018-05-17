@@ -2,14 +2,13 @@
 <playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
     <pages>
         <page name='Table of contents'/>
-        <page name='Higher order functions'/>
         <page name='Generic function'/>
         <page name='Generic constrained function'/>
         <page name='Conforming to Comparable'/>
         <page name='Multiple constraints'/>
         <page name='Pair conditional conformance'/>
         <page name='Pair type'/>
-        <page name='Hash collission test'/>
         <page name='Exercises and answers'/>
+        <page name='Invariance'/>
     </pages>
 </playground>
