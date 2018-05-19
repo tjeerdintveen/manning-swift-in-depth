@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered' executeOnSourceChanges='false'>
+    <pages>
+        <page name='Table of contents'/>
+        <page name='Building a crypto portfolio'/>
+        <page name='A portfolio without generics'/>
+        <page name='Runtime vs compiletime'/>
+        <page name='Passing protocols with associated types'/>
+        <page name='Exercises'/>
+        <page name='Answers'/>
+    </pages>
+</playground>
