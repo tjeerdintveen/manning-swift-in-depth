@@ -7,8 +7,7 @@
         <page name='Conforming to Comparable'/>
         <page name='Multiple constraints'/>
         <page name='Pair conditional conformance'/>
-        <page name='Pair type'/>
-        <page name='Exercises and answers'/>
         <page name='Invariance'/>
+        <page name='Exercises and answers'/>
     </pages>
 </playground>

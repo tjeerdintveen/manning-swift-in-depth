@@ -21,6 +21,10 @@ func firstLast<T>(array: [T]) -> (T, T) {
     return (array[0], array[array.count-1])
 }
 
+let (firstString, lastString) = firstLast(array: ["pineapple", "cherry", "steam locomotive"])
+print(firstString) // "pineapple"
+print(lastString) // "steam locomotive"
+
 struct Waffle {
     let size: String
 }

@@ -26,8 +26,7 @@
  1. [Conforming to Comparable](Conforming%20to%20Comparable)
  1. [Multiple constraints](Multiple%20constraints)
  1. [Pair conditional conformance](Pair%20conditional%20conformance)
- 1. [Pair type](Pair%20type)
- 1. [Hash collission test](Hash%20collission%20test)
+ 1. [Invariance](Invariance)
  1. [Exercises and answers](Exercises%20and%20answers)
  */
 //: [Next](@next)
