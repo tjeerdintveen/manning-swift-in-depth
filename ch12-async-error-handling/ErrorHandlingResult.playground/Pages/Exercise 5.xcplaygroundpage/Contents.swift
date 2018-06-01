@@ -93,7 +93,7 @@ func getVenues(latitude: Double, longitude: Double, completion: @escaping (Resul
             // Parsing Data to JSON
             .flatMap { data in
                 do {
-                    return try Result { try parseData(data) }
+                    return Result(try parseData(data))
                 } catch {
                     return Result(.unexpectedError(error))
                 }
@@ -101,7 +101,7 @@ func getVenues(latitude: Double, longitude: Double, completion: @escaping (Resul
             // Check for server errors
             .flatMap { (json: JSON) -> Result<JSON, FourSquareError> in
                 do {
-                    return try Result { try validateResponse(json: json) }
+                    return Result(try validateResponse(json: json))
                 } catch {
                     return Result(.unexpectedError(error))
                 }
@@ -109,7 +109,7 @@ func getVenues(latitude: Double, longitude: Double, completion: @escaping (Resul
             // Extract venues
             .flatMap { (json: JSON) -> Result<[JSON], FourSquareError> in
                 do {
-                    return try Result { try extractVenues(json: json) }
+                    return Result(try extractVenues(json: json))
                 } catch {
                     return Result(.unexpectedError(error))
                 }

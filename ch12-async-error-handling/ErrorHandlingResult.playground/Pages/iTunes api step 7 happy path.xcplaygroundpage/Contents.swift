@@ -73,24 +73,24 @@ func search(term: String, completionHandler: @escaping (SearchResult<JSON>) -> V
             result
                 // Transform error type to SearchResultError
                 .mapError { (networkError: NetworkError) -> SearchResultError in
-                    ...
+                    // ... code omitted
                 }
                 // Parse Data to JSON, or return SearchResultError
                 .flatMap { (data: Data) -> SearchResult<JSON> in
-                    ...
+                    // ... code omitted
                 }
                 // validate Data
                 .flatMap { (json: JSON) -> SearchResult<JSON> in
-                    ...
+                    // ... code omitted
                 }
                 // filter values
                 .map { (json: JSON) -> [JSON] in
-                    ...
+                    // ... code omitted
                 }
                 // Save to database
                 .flatMap { (mediaItems: [JSON]) -> SearchResult<JSON> in
-                    ...
-                    database.store()
+                    // ... code omitted
+                    // database.store(mediaItems)
         }
         
         completionHandler(convertedResult)
