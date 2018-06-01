@@ -1,6 +1,6 @@
 /*:
  
- # Generics and higher order functions
+ # Generics
  
  Code listings and exercises for [Swift in Depth][Swift in Depth].
  
