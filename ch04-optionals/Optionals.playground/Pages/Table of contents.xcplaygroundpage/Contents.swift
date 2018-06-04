@@ -35,7 +35,7 @@
  1. [Exercise optional booleans](Exercise%20optional%20booleans)
  1. [Answer optional booleans](Answer%20optional%20booleans)
  1. [Implicitly Unwrapped Optionals initialization](Implicitly%20Unwrapped%20Optionals%20initialization)
- 1. [Implicitly Unwrapped Optionals behavior](Implicitly%20Unwrapped%20Optionals%20behavior)
+ 1. [Exercise Implicitly Unwrapped Optionals](Exercise%20Implicitly%20Unwrapped%20Optionals)
  
  */
 //: [Next](@next)

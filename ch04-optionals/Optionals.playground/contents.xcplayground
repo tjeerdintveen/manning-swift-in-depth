@@ -16,6 +16,6 @@
         <page name='Exercise optional booleans'/>
         <page name='Answer optional booleans'/>
         <page name='Implicitly Unwrapped Optionals initialization'/>
-        <page name='Implicitly Unwrapped Optionals behavior'/>
+        <page name='Exercise Implicitly Unwrapped Optionals'/>
     </pages>
 </playground>
