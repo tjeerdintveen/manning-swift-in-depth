@@ -43,7 +43,7 @@ if let membership = customer.membership {
 switch customer.membership {
 case .gold?: print("Customer gets 10% discount")
 case .silver?: print("Customer gets 5% discount")
-default: print("Customer pays regular price")
+case nil: print("Customer pays regular price")
 }
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

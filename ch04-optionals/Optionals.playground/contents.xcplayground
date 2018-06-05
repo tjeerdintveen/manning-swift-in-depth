@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='Table of contents'/>
         <page name='Clean optional unwrapping'/>
         <page name='Prohibited optionals'/>
         <page name='Returning an optional string'/>
         <page name='Granular unwrapping'/>
-        <page name='Exercises multiple optionals'/>
-        <page name='Answers multiple optionals'/>
+        <page name='First exercises'/>
+        <page name='First answers'/>
         <page name='Fallback values'/>
         <page name='Optional enums'/>
         <page name='Optional chaining'/>

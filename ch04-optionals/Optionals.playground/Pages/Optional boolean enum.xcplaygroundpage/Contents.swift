@@ -11,8 +11,8 @@ enum UserPreference: RawRepresentable {
     
     init(rawValue: Bool?) {
         switch rawValue {
-        case let isEnabled? where isEnabled: self = .enabled
-        case let isEnabled? where !isEnabled: self = .disabled
+        case true?: self = .enabled
+        case false?: self = .enabled
         default: self = .notSet
         }
     }
