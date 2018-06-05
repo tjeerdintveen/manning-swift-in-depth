@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='Table of contents'/>
         <page name='Run with functions'/>
         <page name='Run with computed properties'/>
         <page name='Run with computed properties setter'/>
-        <page name='Healthplan not lazy'/>
-        <page name='Healthplan lazy'/>
-        <page name='Healthplan breaking lazy'/>
-        <page name='Healthplan lazy private setter'/>
-        <page name='Healthplan lazy loading before copying'/>
-        <page name='Healthplan lazy loading after copying'/>
         <page name='Property observer'/>
         <page name='Property observer initializer'/>
         <page name='Exercises'/>
         <page name='Answers'/>
+        <page name='LearningPlan'/>
+        <page name='LearningPlan with a lazy property'/>
+        <page name='LearningPlan with a breaking lazy property'/>
+        <page name='LearningPlan with a lazy private setter'/>
+        <page name='LearningPlan lazy loading before copying'/>
+        <page name='LearningPlan lazy loading after copying'/>
     </pages>
 </playground>
