@@ -49,8 +49,4 @@ do {
 } catch {
     print(error)
 }
-
-let phoneNumber = try! PhoneNumber("(123) 123-1234")
-print(phoneNumber) // PhoneNumber(contents: "(123) 123-1234")
-
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

@@ -18,12 +18,13 @@
  [Tjeerd in 't Veen]: https://twitter.com/tjeerdintveen
  [Swift in Depth]: https://www.manning.com/books/swift-in-depth
  
- **Written in Swift 4.0 using Xcode 9.0**
+ - important: You need Swift 4.2 or higher to run this playground. At the time of writing, Swift 4.2 is not officially released, you can download a 4.2 snapshot at https://swift.org/download/#snapshots . Then in Xcode, go to preferences > Components. Select the Swift 4.2 snapshot, and restart Xcode.
  
  ## Table of Contents
  
  1. [Memberwise initializer](Memberwise%20initializer)
  1. [Memberwise and custom initializer](Memberwise%20and%20custom%20initializer)
+ 1. [Custom initializer](Custom%20initializer)
  1. [Exercises](Exercises)
  1. [Answers](Answers)
  */

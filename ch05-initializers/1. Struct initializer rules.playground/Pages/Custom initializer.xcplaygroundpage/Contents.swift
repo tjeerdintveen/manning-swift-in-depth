@@ -1,7 +1,7 @@
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 import UIKit
 
-//: # A memberwise and custom initializer
+//: # A custom initializer
 
 enum Pawn: CaseIterable {
     case dog, car, ketchupBottle, iron, shoe, hat
@@ -10,9 +10,6 @@ enum Pawn: CaseIterable {
 struct Player {
     let name: String
     let pawn: Pawn
-}
-
-extension Player {
     
     init(name: String) {
         self.name = name
@@ -21,6 +18,10 @@ extension Player {
 }
 
 let player = Player(name: "SuperJeff")
-let anotherPlayer = Player(name: "Mary", pawn: .dog)
+print(player.pawn) // shoe
+
+//: error: extra argument 'pawn' in call
+//let secondPlayer = Player(name: "Carl", pawn: .dog)
+
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

@@ -1,30 +1,27 @@
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
-import UIKit
+import Foundation
 
 /*:
- ## Factory methods
+ # Factory methods
 This playground page demonstrates initializing via factory methods.
 
 First we prepare our data types.
 */
-func random(max: UInt32) -> UInt32 {
-    return arc4random_uniform(max)
+
+enum Pawn: CaseIterable {
+    case dog, car, ketchupBottle, iron, shoe, hat
 }
 
 struct Player {
     let name: String
-    let color: UIColor
+    let pawn: Pawn
 }
 
 extension Player {
     
     init(name: String) {
         self.name = name
-        
-        self.color = UIColor(red:  CGFloat(random(max: 100)) / 100,
-                             green: CGFloat(random(max: 100)) / 100,
-                             blue:  CGFloat(random(max: 100)) / 100,
-                             alpha: 1.0)
+        self.pawn = Pawn.allCases.randomElement()!
     }
 }
 

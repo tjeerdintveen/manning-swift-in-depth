@@ -1,33 +1,27 @@
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
-import UIKit
-/*:
- ## Creating Mutability Land
- 
- Our randomizer function.
- */
-func random(max: UInt32) -> UInt32 {
-    return arc4random_uniform(max)
+import Foundation
+
+//: # Creating Mutability land
+
+enum Pawn: CaseIterable {
+    case dog, car, ketchupBottle, iron, shoe, hat
 }
 
-//: The player type.
 struct Player {
     let name: String
-    let color: UIColor
+    let pawn: Pawn
 }
 
 extension Player {
     
     init(name: String) {
         self.name = name
-        
-        self.color = UIColor(red:  CGFloat(random(max: 100)) / 100,
-                             green: CGFloat(random(max: 100)) / 100,
-                             blue:  CGFloat(random(max: 100)) / 100,
-                             alpha: 1.0)
+        self.pawn = Pawn.allCases.randomElement()!
     }
 }
 
 //: BoardGame is a superclass now.
+
 class BoardGame {
     let players: [Player]
     let numberOfTiles: Int
@@ -50,7 +44,7 @@ class BoardGame {
     }
 }
 
- //: We subclass BoardGame with the new MutabilityLand class
+//: ## We subclass BoardGame with the new MutabilityLand class
 
 class MutabilityLand: BoardGame {
     var scoreBoard = [String: Int]()
@@ -58,7 +52,7 @@ class MutabilityLand: BoardGame {
 }
 
 //: ## Initializing MutabilityLand.
-//: Uncomment the initializer you want to use.
+//: Uncomment the initializer that you want to use.
 
 // Convenience initializer
 let mutabilityLand = MutabilityLand(names: ["Melissa", "SuperJeff", "Dave"])
