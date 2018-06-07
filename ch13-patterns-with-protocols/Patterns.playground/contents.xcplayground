@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered' executeOnSourceChanges='false'>
+    <pages>
+        <page name='Table of contents'/>
+        <page name='Mocking with protocols'/>
+        <page name='Conditional Conformance'/>
+        <page name='Conditional Conformance part 2'/>
+        <page name='Conditional Conformance CachedValue'/>
+        <page name='Poker'/>
+        <page name='Poker with an enum'/>
+        <page name='Poker with type erasure'/>
+        <page name='Validator as a generic struct'/>
+        <page name='Exercises'/>
+        <page name='Answers'/>
+    </pages>
+</playground>
