@@ -16,14 +16,15 @@ enum RoyalRank: Comparable {
         }
     }
     
-    static func ==(lhs: RoyalRank, rhs: RoyalRank) -> Bool {
-        switch (lhs, rhs) {
-        case (emperor, emperor): return true
-        case (king, king): return true
-        case (duke, duke): return true
-        default: return false
-        }
-    }
+    //: Not needed, but we can manually implement the == method.
+//    static func ==(lhs: RoyalRank, rhs: RoyalRank) -> Bool {
+//        switch (lhs, rhs) {
+//        case (emperor, emperor): return true
+//        case (king, king): return true
+//        case (duke, duke): return true
+//        default: return false
+//        }
+//    }
 }
 
 func lowest<T: Comparable>(_ array: [T]) -> T? {

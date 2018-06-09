@@ -4,7 +4,8 @@ import Foundation
 
 //: # Generic constrained function
 
-//: Elaborate function body
+//: Expanded function body
+
 /// Returns the lowest value inside an array, determined by comparable.
 ///
 /// - Parameter array: AN array of values

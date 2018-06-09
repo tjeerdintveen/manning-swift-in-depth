@@ -1,4 +1,4 @@
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)
 
 //: # Exercises and Answers
 
@@ -86,4 +86,4 @@ let lowercased = ["S", "W", "I", "F", "T"].scan(initialResult: "") { (result: St
 
 print(lowercased) // ["s", "sw", "swi", "swif", "swift"]
 
-//: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
+//: [Table of contents](Table%20of%20contents) - [Previous page](@previous)

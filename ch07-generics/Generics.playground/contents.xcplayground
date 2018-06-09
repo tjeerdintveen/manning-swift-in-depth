@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='Table of contents'/>
         <page name='Generic function'/>
         <page name='Generic constrained function'/>
         <page name='Conforming to Comparable'/>
         <page name='Multiple constraints'/>
-        <page name='Pair conditional conformance'/>
+        <page name='Pair with conditional conformance'/>
+        <page name='Pair with manual Hashable implementation'/>
         <page name='Invariance'/>
         <page name='Exercises and answers'/>
     </pages>
