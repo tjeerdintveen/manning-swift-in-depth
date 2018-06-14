@@ -26,6 +26,7 @@
  1. [Propagation](Propagation)
  1. [Delivering pleasant APIs](Delivering%20pleasant%20APIs)
  1. [Custom type](Custom%20type)
+ 1. [Exercises](Exercises)
 
   */
 //: [Next](@next)

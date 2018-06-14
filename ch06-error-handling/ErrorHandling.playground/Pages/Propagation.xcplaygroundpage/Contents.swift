@@ -19,9 +19,9 @@ enum ParseRecipeError: Error {
 extension ParseRecipeError: LocalizedError {
     var errorDescription: String? {
         switch self {
-        case let .parseError(line: line, symbol: symbol):
-            return String(format: NSLocalizedString("Parsing data failed at line: %i and symbol: %@",
-                                                    comment: "Parsing error line symbol"), line, symbol)
+        case .parseError:
+            return NSLocalizedString("The HTML file had unexpected symbols.",
+                                     comment: "Parsing error reason unexpected symbols")
         case .noIngredientsDetected:
             return NSLocalizedString("No ingredients were detected.",
                                      comment: "Parsing error no ingredients.")
@@ -33,9 +33,9 @@ extension ParseRecipeError: LocalizedError {
     
     var failureReason: String? {
         switch self {
-        case .parseError:
-            return NSLocalizedString("The HTML file had unexpected symbols.",
-                                     comment: "Parsing error reason unexpected symbols")
+        case let .parseError(line: line, symbol: symbol):
+            return String(format: NSLocalizedString("Parsing data failed at line: %i and symbol: %@",
+                                                    comment: "Parsing error line symbol"), line, symbol)
         case .noIngredientsDetected:
             return NSLocalizedString("The recipe seems to be missing its ingredients.",
                                      comment: "Parsing error reason missing ingredients.")
@@ -48,7 +48,7 @@ extension ParseRecipeError: LocalizedError {
     var recoverySuggestion: String? {
         return "Please try a different recipe."
     }
-
+    
 }
 
 extension ParseRecipeError: CustomNSError {
@@ -100,7 +100,7 @@ struct ErrorHandler {
 
 // Removes the blabbing stories that people put in front of recipes and strips the actual recipe
 struct RecipeExtractor {
-
+    
     let html: String
     
     func extractRecipe() throws -> Recipe {
