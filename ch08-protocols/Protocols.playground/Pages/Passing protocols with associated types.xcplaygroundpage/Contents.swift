@@ -18,7 +18,7 @@ class MailJob: Worker {
     typealias Output = Bool
     
     func start(input: String) -> Bool {
-        // Send mail to emailaddress (input can represent user id)
+        // Send mail to emailaddress (input can represent an email address)
         // On finished, set output
         return true
     }
@@ -56,9 +56,13 @@ func runWorker<W>(worker: W, input: [W.Input]) where W: Worker {
     }
 }
 
-struct User {
+final class User {
     let firstName: String
     let lastName: String
+    init(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+    }
 }
 
 let mailJob = MailJob()
@@ -115,7 +119,7 @@ where W.Input == UIImage, W.Output == Bool {
         while !images.isEmpty {
             
             for image in images {
-                if worker.start(input: image) {
+                if !worker.start(input: image) {
                     failedCount += 1
                 }
             }

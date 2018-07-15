@@ -6,16 +6,16 @@ import Foundation
 
 final class CachedValue<T> {
     private let load: (() -> T)
-    private var lastLoad: Date
+    private var lastLoaded: Date
     
     private var timeToLive: Double
     private var currentValue: T
     
     public var value: T {
-        let needsRefresh = lastLoad.timeIntervalSinceNow > timeToLive
+        let needsRefresh = lastLoaded.timeIntervalSinceNow > timeToLive
         if needsRefresh {
             currentValue = load()
-            lastLoad = Date()
+            lastLoaded = Date()
             return currentValue
         }
         return currentValue
@@ -25,7 +25,7 @@ final class CachedValue<T> {
         self.timeToLive = timeToLive
         self.load = load
         self.currentValue = load()
-        self.lastLoad = Date()
+        self.lastLoaded = Date()
     }
 }
 

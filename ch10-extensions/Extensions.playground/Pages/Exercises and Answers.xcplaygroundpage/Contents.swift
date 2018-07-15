@@ -16,7 +16,7 @@ extension Mentos where Self: Coke {
 }
 
 func mix<T>(concoction: T) where T: Mentos, T: Coke {
-        concoction.explode() // make this work, but only if T conforms to both protocols, not just one
+    concoction.explode() // make this work, but only if T conforms to both protocols, not just one
 }
 
 //: ## 2. What is the output of the following code?

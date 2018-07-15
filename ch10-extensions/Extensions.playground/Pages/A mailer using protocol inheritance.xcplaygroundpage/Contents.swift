@@ -26,13 +26,13 @@ extension Mailer {
     }
 }
 
-protocol ValidatedMailer: Mailer {
+protocol ValidatingMailer: Mailer {
     func send(email: Email) throws // Override send to make it throwing
     func validate(email: Email) throws
 }
 
 //: Now the send method is a throwing method that validates.
-extension ValidatedMailer {
+extension ValidatingMailer {
     func send(email: Email) throws {
         try validate(email: email)
         // Connect to server
@@ -45,7 +45,7 @@ extension ValidatedMailer {
     }
 }
 
-struct SMTPClient: ValidatedMailer {
+struct SMTPClient: ValidatingMailer {
     // Implementation omitted.
 }
 
