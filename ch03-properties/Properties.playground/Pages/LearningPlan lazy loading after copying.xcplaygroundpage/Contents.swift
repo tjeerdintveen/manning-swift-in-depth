@@ -20,7 +20,7 @@ struct LearningPlan {
         switch level {
         case ..<25: return "Watch an English documentary."
         case ..<50: return "Translate a newspaper article to English and transcribe one song."
-        case 100...: return "Read two academic papers and translate them to your native language."
+        case 100...: return "Read two academic papers and translate them into your native language."
         default: return "Try to have 30 mins of English reading."
         }
     }()
@@ -45,7 +45,7 @@ intensePlan.contents
 easyPlan.level = 0
 
 //: Now each plan loads their own contents separately
-print(intensePlan.contents) // Read two academic papers and translate them to your native language.
+print(intensePlan.contents) // Read two academic papers and translate them into your native language.
 print(easyPlan.contents) // Watch an English documentary.
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

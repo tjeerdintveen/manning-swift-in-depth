@@ -5,7 +5,7 @@
 //: 1. A superclass prevents duplication, no need to declare the same property twice. With subclassing you can also override existing functionality.
 //: 2. No need to refactor anything if you add another type. Whereas with subclassing you risk refactoring a superclass and its existing subclasses. Second, you are not forced to use classes.
 //: 3. What are the number possible variations of Bagel?
-// Seven. There are 3 for Topping + 4 for BagelType.
+// Twelve. There are 3 for Topping times 4 for BagelType.
 
 // 4. Turn Bagel into a struct
 

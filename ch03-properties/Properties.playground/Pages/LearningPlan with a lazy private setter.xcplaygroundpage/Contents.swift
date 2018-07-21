@@ -21,7 +21,7 @@ struct LearningPlan {
         switch level {
         case ..<25: return "Watch an English documentary."
         case ..<50: return "Translate a newspaper article to English and transcribe one song."
-        case 100...: return "Read two academic papers and translate them to your native language."
+        case 100...: return "Read two academic papers and translate them into your native language."
         default: return "Try to have 30 mins of English reading."
         }
     }()
