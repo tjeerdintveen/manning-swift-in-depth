@@ -9,7 +9,7 @@
 
 // 4. Turn Bagel into a struct
 
-// There are actually two ways, since Bagel contains two enums. So you can pick which enum to store the data in.
+// There are two ways since Bagel contains two enums. So you can pick which enum to store the data in.
 
 enum Topping {
     case creamCheese

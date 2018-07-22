@@ -26,10 +26,10 @@ struct Bagel {
     let type: BagelType
 }
 
-// 4. Turn Bagel into an enum while keeping the same amount of possible variations.
+//: 4. Turn Bagel into an enum while keeping the same amount of possible variations.
 
-// 5. Given this enum representing a Puzzle game for a certain age range (baby, toddler etc) and containing a number of puzzle pieces.
-// How would could this enum be represented as a struct instead?
+//: 5. Given this enum representing a Puzzle game for a certain age range (baby, toddler etc) and containing a number of puzzle pieces.
+//: How would could this enum be represented as a struct instead?
 enum Puzzle {
     case baby(numberOfPieces: Int)
     case toddler(numberOfPieces: Int)

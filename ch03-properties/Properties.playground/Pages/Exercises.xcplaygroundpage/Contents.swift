@@ -69,7 +69,7 @@ let songs = billWithers.loadSongs
 // billWithers.songsFileName = "oldsongs" // change file name
 // billWithers.songs.count // Should be 0 after renaming songsFileName, but is 2
 
- //: 4. If you need a propery with both behavior and storage, what kind of property would you use?
+ //: 4. If you need a property with both behavior and storage, what kind of property would you use?
  //: 5. If you need a property with only behavior and no storage, what kind of property would you use?
  //: 6. Can you spot the bug in the code below?
 
