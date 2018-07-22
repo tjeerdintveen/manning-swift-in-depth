@@ -33,7 +33,7 @@ func refreshCache(_ cache: Cache<OnlineCourse>) {
     
 }
 refreshCache(Cache<OnlineCourse>()) // is allowed
-//readCourse(Cache<SwiftOnTheServer>()) // error: cannot convert value of type 'Cache<SwiftOnTheServer>' to expected argument type 'Cache<OnlineCourse>'
+//refreshCache(Cache<SwiftOnTheServer>()) // error: cannot convert value of type 'Cache<SwiftOnTheServer>' to expected argument type 'Cache<OnlineCourse>'
 
 
 //: Swift types are covariant
