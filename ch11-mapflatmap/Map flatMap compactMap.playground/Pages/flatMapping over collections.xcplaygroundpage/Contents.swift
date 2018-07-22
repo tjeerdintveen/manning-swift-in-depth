@@ -31,4 +31,18 @@ extension String {
 let interspersedString = "Swift".interspersed("-")
 print(interspersedString) // S-w-i-f-t
 
+
+//: You can combine all values of two sequences with flatMap and map.
+
+let suits = ["Hearts", "Clubs", "Diamonds", "Spades"]
+let faces = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+
+var deckOfCards = suits.flatMap { suit in
+    faces.map { face in
+        (suit, face)
+    }
+}
+deckOfCards.shuffle()
+print(deckOfCards) // [("Diamonds", "5"), ("Hearts", "8"), ("Hearts", "K"), ("Clubs", "3"), ("Diamonds", "10"), ("Spades", "A"), ...
+
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

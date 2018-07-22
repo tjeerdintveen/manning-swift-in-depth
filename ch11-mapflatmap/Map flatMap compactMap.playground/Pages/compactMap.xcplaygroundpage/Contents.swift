@@ -5,7 +5,7 @@ import Foundation
 //: # compactMap
 
 
-let wrongUrl = URL(string: "I am no url")
+let wrongUrl = URL(string: "OMG SHOES")
 print(wrongUrl) // nil
 let properUrl = URL(string: "https://www.swift.org")
 print(properUrl) // Optional(https://www.swift.org)
@@ -27,6 +27,7 @@ print(urls) // [https://www.duckduckgo.com, https://www.twitter.com, https://www
 
 let optionalUrls: [URL?] = [
     URL(string: "https://www.duckduckgo.com"),
+    URL(string: "Bananaphone"),
     URL(string: "https://www.twitter.com"),
     URL(string: "https://www.swift.org")
 ]
