@@ -43,7 +43,7 @@ func occurrences<T: Hashable>(values: [T]) -> [T: Int] {
 }
 
 print(occurrences(values: ["A", "A", "B", "C", "A"])) // ["C": 1, "B": 1, "A": 3]
-//: 3. Create a logger that will print a generic type's description and debugdescription when passed.
+//: 3. Create a logger that prints a generic type's description and debug description when passed.
 
 //: Hint: Besides CustomStringConvertible which makes sure types implement a description property, Swift also offers CustomDebugStringConvertible, which makes type implement a debugDescription property.
 
