@@ -24,7 +24,7 @@ class BoardGame {
     let players: [Player]
     let numberOfTiles: Int
     
-    init(players: [Player], numberOfTiles: Int) {
+    init(players: [Player], numberOfTiles: Int = 32) {
         self.players = players
         self.numberOfTiles = numberOfTiles
     }

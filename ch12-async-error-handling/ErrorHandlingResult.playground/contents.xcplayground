@@ -9,7 +9,8 @@
         <page name='iTunes api step 5 flatMap'/>
         <page name='iTunes api step 6 throwing inside Result'/>
         <page name='iTunes api step 7 happy path'/>
-        <page name='iTunes api step 8 AnyError'/>
+        <page name='AnyError'/>
+        <page name='Never'/>
         <page name='Exercise 1'/>
         <page name='Exercises 2 3 and 4'/>
         <page name='Exercise 5'/>

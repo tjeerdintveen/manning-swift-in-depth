@@ -45,12 +45,14 @@ typealias SearchResult<Value> = Result<Value, SearchResultError>
 typealias JSON = [String: Any]
 
 func search(term: String, completionHandler: @escaping (SearchResult<JSON>) -> Void) {
-    let cleanedTerm = term.components(separatedBy: .whitespacesAndNewlines).joined().lowercased()
-    let path = "https://itunes.apple.com/search?term=" + cleanedTerm
-    guard let url = URL(string: path) else {
+    let encodedString = term.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+    let path = encodedString.map { "https://itunes.apple.com/search?term=" + $0 }
+    
+    guard let url = path.flatMap(URL.init) else {
         completionHandler(SearchResult(.invalidTerm(term)))
         return
     }
+
     callURL(with: url) { result in
         switch result {
         case .success(let data):

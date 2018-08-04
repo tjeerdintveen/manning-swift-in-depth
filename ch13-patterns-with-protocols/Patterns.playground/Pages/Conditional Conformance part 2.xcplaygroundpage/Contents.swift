@@ -38,7 +38,7 @@ extension Optional: Track where Wrapped: Track {
     }
 }
 
-let audio: Track? = AudioTrack(file: URL(fileURLWithPath: "1.mp3"))
+let audio: AudioTrack? = AudioTrack(file: URL(fileURLWithPath: "1.mp3"))
 audio?.play() // Now an optional can play audio too, if there is any `Track` type inside.
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

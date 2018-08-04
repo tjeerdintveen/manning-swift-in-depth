@@ -15,7 +15,7 @@ struct Pair<T: Hashable, U: Hashable>: Hashable {
 
 }
 
-let pair = Pair(10, 20)
+let pair = Pair<Int, Int>(10, 20)
 print(pair.hashValue) //5280472796840031924
 
 let set: Set = [

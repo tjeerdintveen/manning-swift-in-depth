@@ -33,7 +33,7 @@ struct AnyPokerGame: PokerGame {
 }
 
 extension AnyPokerGame: Hashable {
-    
+        
     func hash(into hasher: inout Hasher) {
         _hashable.hash(into: &hasher)
     }

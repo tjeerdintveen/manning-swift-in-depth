@@ -33,18 +33,18 @@ let filtered = bigRange.lazy.filter { (int) -> Bool in
 }
 
 // We want the last three elements. But still, nothing happens yet
-let lastTen = filtered.suffix(3)
+let lastThree = filtered.suffix(3)
 
 // Now the lazy code is evaluated
-for value in lastTen {
+for value in lastThree {
     print(value) // values are consumed
 }
 
 //: ## Reduce
 
-let text = "This is some text.\nAnother line.'\nYet, another line again."
+let text = "It's hard to come up with fresh exercises.\nOver and over again.'\nAnd again."
 let startValue = 0
-let amountOfLineBreaks = text.reduce(startValue) { (accumulation: Int, char: Character) in
+let numberOfLineBreaks = text.reduce(startValue) { (accumulation: Int, char: Character) in
     if char == "\n" {
         return accumulation + 1
     } else {
@@ -52,7 +52,7 @@ let amountOfLineBreaks = text.reduce(startValue) { (accumulation: Int, char: Cha
     }
 }
 
-print(amountOfLineBreaks) // 2
+print(numberOfLineBreaks) // 2
 
 //: ## Reduce into
 
