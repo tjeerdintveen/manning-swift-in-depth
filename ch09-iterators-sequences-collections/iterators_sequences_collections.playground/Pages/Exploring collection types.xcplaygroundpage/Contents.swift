@@ -32,10 +32,6 @@ arr[partitioned...] // [4, 2]
 var evens: ArraySlice<Int> = arr[partitioned...] // [4, 2]
 evens.sort() // [2, 4]
 
-var string = "If only I have a funny punchline"
-
-var myDict = ["Hi" : 2]
-
 //: ## RangeReplaceableCollection
 
 var muppets = ["Kermit", "Miss Piggy", "Fozzie bear"]
