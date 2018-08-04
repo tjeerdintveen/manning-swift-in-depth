@@ -33,13 +33,14 @@ func isEmoji(_ scalar: Unicode.Scalar) -> Bool {
 /// - Parameter string: a target string to filter emoji's from
 /// - Returns: The string without emoji's
 func removeEmojis(_ string: String) -> String {
-    let result: String.UnicodeScalarView = string.unicodeScalars.filter { !isEmoji($0) }
-    return String(result)
+    var scalars = string.unicodeScalars
+    scalars.removeAll(where: isEmoji)
+    return String(scalars)
 }
 
 //: ## Cover without map
 
-struct Cover {
+class Cover {
     let image: UIImage
     let title: String?
 

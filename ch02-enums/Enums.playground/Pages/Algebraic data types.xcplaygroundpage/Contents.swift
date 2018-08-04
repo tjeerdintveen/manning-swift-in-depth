@@ -15,7 +15,7 @@ enum Day {
 }
 
 enum Age {
-    case known(Int8)
+    case known(UInt8)
     case unknown
 }
 
