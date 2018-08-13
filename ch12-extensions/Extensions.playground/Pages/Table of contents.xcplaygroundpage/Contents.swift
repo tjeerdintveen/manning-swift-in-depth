@@ -24,7 +24,7 @@
  1. [Horizontal modeling](Horizontal%20modeling)
  1. [Protocol overrides](Protocol%20overrides)
  1. [Mailer using protocol inheritance](A%20mailer%20using%20protocol%20inheritance)
- 1. [Mailer using protocol intersections](A%20mailer%20using%20protocol%20intersections)
+ 1. [Mailer using protocol composition](A%20mailer%20using%20protocol%20composition)
  1. [Extending Sequence](Extending%20Sequence)
  1. [Exercises and Answers](Exercises%20and%20Answers)
   */

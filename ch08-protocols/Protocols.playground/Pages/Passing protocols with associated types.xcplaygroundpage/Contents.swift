@@ -50,7 +50,7 @@ class FileRemover: Worker {
 
 //: ## Passing Workers around
 
-func runWorker<W>(worker: W, input: [W.Input]) where W: Worker {
+func runWorker<W: Worker>(worker: W, input: [W.Input]) {
     input.forEach { (value: W.Input) in
         worker.start(input: value)
     }

@@ -4,7 +4,7 @@
         <page name='Table of contents'/>
         <page name='Horizontal modeling'/>
         <page name='A mailer using protocol inheritance'/>
-        <page name='A mailer using protocol intersections'/>
+        <page name='A mailer using protocol composition'/>
         <page name='Protocol overrides'/>
         <page name='Extending Sequence'/>
         <page name='Exercises and Answers'/>
