@@ -30,7 +30,11 @@ func wrap<T>(value: Int, secondValue: T) -> ([Int], Int)? {
     }
 }
 
-//: 2. Write a function that given an array, returns a dictionary of the occurrences of each element inside the array
+//: 2. What's the benefit in using generics over the `Any` type? E.g. Writing a function as `func<T>(process: [T])` versus `func(process:[Any])`.
+
+//: By using a generic, code is made polymorphic at compile time. By using Any you have to downcast at runtime.
+
+//: 3. Write a function that given an array, returns a dictionary of the occurrences of each element inside the array
 
 func occurrences<T: Hashable>(values: [T]) -> [T: Int] {
     var groupedValues = [T: Int]()
