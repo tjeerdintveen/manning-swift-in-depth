@@ -24,7 +24,7 @@ extension Result {
 
 extension Result {
     
-    /// Evaluates the given closure when this Result instance has a value.
+    /// Evaluates the given closure when this Result instance has an error.
     public func mapError<E: Error>(_ transform: (ErrorType) throws -> E) rethrows -> Result<Value, E> {
         switch self {
         case .success(let value):
