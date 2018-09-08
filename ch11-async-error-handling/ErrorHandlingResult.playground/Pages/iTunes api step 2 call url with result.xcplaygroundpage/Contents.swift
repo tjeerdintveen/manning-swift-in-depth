@@ -34,7 +34,7 @@ func callURL(with url: URL, completionHandler: @escaping (Result<Data, NetworkEr
     task.resume()
 }
 
-let url = URL(string: "https://itunes.apple.com/search?term=ironman")!
+let url = URL(string: "https://itunes.apple.com/search?term=iron%20man")!
 
 callURL(with: url) { (result: Result<Data, NetworkError>) in
     switch result {
