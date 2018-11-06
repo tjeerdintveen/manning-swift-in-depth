@@ -1,9 +1,12 @@
-# manning-swift-in-depth
-Source code for Manning's book: Swift in depth
+# Swift in Depth 
 
-Each chapter has a playground which can be opened with XCode.  Each playground is divided up into pages. 
+Here you can find the source and exercises of the book Swift in Depth, published by Manning.
 
-The source is written in XCode 9 on Swift 4.
+[Link to the book](https://www.manning.com/books/swift-in-depth)
+
+Each chapter has a playground which can be opened with XCode.  You may find the source and exercises here.
+
+The source is written in XCode 9 on Swift 4.2.
 
 If you don't see the pages, press cmd+1 to open XCode's file inspector.
 
