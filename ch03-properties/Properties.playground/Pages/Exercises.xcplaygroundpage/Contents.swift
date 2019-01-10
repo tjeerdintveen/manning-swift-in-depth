@@ -59,7 +59,7 @@ components.month = 7
 components.year = 1938
 var billWithers = Artist(name: "Bill Withers", birthDate: Calendar.current.date(from: components)!, songsFileName: "songs")
 billWithers.getAge()
-let songs = billWithers.loadSongs
+let songs = billWithers.loadSongs()
 
 //: 2. Assuming loadSongs is turned into a lazy property called "songs", make sure the following code doesn't break it by trying to override the property data
 // billWithers.songs = []
