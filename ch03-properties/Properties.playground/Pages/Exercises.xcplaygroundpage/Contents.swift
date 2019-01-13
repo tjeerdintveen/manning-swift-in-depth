@@ -27,8 +27,8 @@ struct Artist {
 
     func getAge() -> Int? {
         let years = Calendar.current
-            .dateComponents([.year], from: Date(), to: birthDate)
-            .day
+            .dateComponents([.year], from: birthDate, to: Date())
+            .year
 
         return years
     }
