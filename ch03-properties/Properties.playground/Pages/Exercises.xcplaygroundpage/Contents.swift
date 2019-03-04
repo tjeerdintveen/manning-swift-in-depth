@@ -27,8 +27,8 @@ struct Artist {
 
     func getAge() -> Int? {
         let years = Calendar.current
-            .dateComponents([.year], from: Date(), to: birthDate)
-            .day
+            .dateComponents([.year], from: birthDate, to: Date())
+            .year
 
         return years
     }
@@ -60,6 +60,7 @@ components.year = 1938
 var billWithers = Artist(name: "Bill Withers", birthDate: Calendar.current.date(from: components)!, songsFileName: "songs")
 billWithers.getAge()
 let songs = billWithers.loadSongs()
+print(billWithers.getAge())
 
 //: 2. Assuming loadSongs is turned into a lazy property called "songs", make sure the following code doesn't break it by trying to override the property data
 // billWithers.songs = []

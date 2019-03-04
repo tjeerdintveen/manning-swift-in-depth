@@ -43,8 +43,8 @@ extension TravelPlan: Collection {
     typealias KeysIndex = DataType.Index
     typealias DataElement = DataType.Element
     
-    var startIndex: KeysIndex { return trips.keys.startIndex }
-    var endIndex: KeysIndex { return trips.keys.endIndex }
+    var startIndex: KeysIndex { return trips.startIndex }
+    var endIndex: KeysIndex { return trips.endIndex }
     func index(after i: KeysIndex) -> KeysIndex {
         return trips.index(after: i)
     }
@@ -54,7 +54,6 @@ extension TravelPlan: Collection {
     }
     
 }
-
 //: We can now iterate over TravelPlan
 
 let activities = [
@@ -112,6 +111,6 @@ let adrenalineActivities = [
     Activity(date: Date(), description: "Sky diving")
 ]
 
-let adrenalinePlan = [adrenalineTrip: activities] // We can now create a TravelPlan from a dictionary
+let adrenalinePlan: TravelPlan = [adrenalineTrip: activities] // We can now create a TravelPlan from a dictionary
 
 ////: [Next](@next)
