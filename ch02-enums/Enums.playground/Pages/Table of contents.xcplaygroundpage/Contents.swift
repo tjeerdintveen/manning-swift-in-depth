@@ -20,13 +20,13 @@
  **Written in Swift 5.0 using Xcode 11.3.1**
  
  ## Table of Contents
- 
- 1. [Enums instead of subclassing](Enums%20instead%20of%20subclassing)
- 1. [Enums instead of subclassing Workout type](Enums%20instead%20of%20subclassing%20Workout%20type)
- 1. [Polymorphism](Polymorphism)
+
  1. [Message as a struct](Message%20as%20a%20struct)
  1. [An invalid Message](An%20invalid%20Message)
  1. [Message as an enum](Message%20as%20an%20enum)
+ 1. [Polymorphism](Polymorphism)
+ 1. [Enums instead of subclassing](Enums%20instead%20of%20subclassing)
+ 1. [Enums instead of subclassing Workout type](Enums%20instead%20of%20subclassing%20Workout%20type)
  1. [Algebraic Data Types](Algebraic%20data%20types)
  1. [Raw value enum](Raw%20value%20enum)
  1. [Raw value enum with values omitted](Raw%20value%20enum%20with%20values%20omitted)
