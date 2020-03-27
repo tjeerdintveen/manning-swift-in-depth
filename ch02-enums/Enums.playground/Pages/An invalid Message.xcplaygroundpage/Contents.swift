@@ -18,7 +18,7 @@ struct Message {
 
 //: This message has invalid state. Can't have both "hasJoined" and "hasLeft".
 
-let brokenMessage = Message(userId: "2",
+let brokenMessage = Message(userId: "1",
                             contents: "Hi there", // We have text to show
     date: Date(),
     hasJoined: true, // But this message also signals a joining state

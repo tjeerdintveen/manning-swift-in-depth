@@ -30,7 +30,6 @@ struct Pushups {
     let date: Date
 }
 
-
 let run = Run(id: "3", startTime: Date(), endTime: Date(timeIntervalSinceNow: 3600), distance: 300, onRunningTrack: false)
 
 let cycle = Cycle(id: "4", startTime: Date(), endTime: Date(timeIntervalSinceNow: 3600), distance: 400, incline: 20, type: .mountainBike)
