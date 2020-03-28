@@ -38,7 +38,7 @@ func parseLocation(_ latitude: String, _ longitude: String) throws -> Location {
 do {
     try parseLocation("I am not a double", "110")
 } catch {
-    print(error) // invalidData <1>
+    print(error) // invalidData
 }
 
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)

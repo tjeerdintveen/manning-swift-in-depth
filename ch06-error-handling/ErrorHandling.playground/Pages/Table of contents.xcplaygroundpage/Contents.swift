@@ -24,8 +24,8 @@
  1. [Errors](Errors)
  1. [Keeping predictable state](Keeping%20predictable%20state)
  1. [Propagation](Propagation)
- 1. [Delivering pleasant APIs](Delivering%20pleasant%20APIs)
- 1. [Custom type](Custom%20type)
+ 1. [Capturing validity within a type](Capturing%20validity%20within%20a%20type)
+ 1. [Optionals](Optionals)
  1. [Exercises](Exercises)
 
   */

@@ -134,6 +134,7 @@ let recipeExtractor = RecipeExtractor(html: html)
 
 do {
     let recipe = try recipeExtractor.extractRecipe()
+    print(recipe)
 } catch  {
     ErrorHandler.default.handleError(error)
 }
