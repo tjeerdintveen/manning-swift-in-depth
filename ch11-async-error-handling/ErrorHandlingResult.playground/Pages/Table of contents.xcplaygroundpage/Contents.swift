@@ -12,27 +12,27 @@
  
  Press command + 1 to see all contents.
  
- Go to Editor > Show Rendered Markup or Editor > Show Raw Markup, to switch between presentation styles.
+ Xcode: Go to Editor >  Show Raw Markup, to switch between presentation styles.
  
  [Tjeerd in 't Veen]: https://twitter.com/tjeerdintveen
  [Swift in Depth]: https://www.manning.com/books/swift-in-depth
  
- **Written in Swift 4.1 using Xcode 9.3**
+ **Written in Swift 5.0 using Xcode 11.3.1***
  
  ## Table of Contents
  
- 1. [iTunes api step 1 call url cocoa touch style](iTunes%20api%20step%201%20call%20url%20cocoa%20touch%20style)
- 1. [iTunes api step 2 call url with result](iTunes%20api%20step%202%20call%20url%20with%20result)
- 1. [iTunes api step 3 add search](iTunes%20api%20step%203%20add%20search)
- 1. [iTunes api step 4 mapping](iTunes%20api%20step%204%20mapping)
- 1. [iTunes api step 5 flatMap](iTunes%20api%20step%205%20flatMap)
- 1. [iTunes api step 6 throwing inside Result](iTunes%20api%20step%206%20throwing%20inside%20Result)
- 1. [iTunes api step 7 happy path](iTunes%20api%20step%205%20happy%20path)
- 1. [AnyError](AnyError)
+ 1. [iTunes api cocoa touch style](iTunes%20api%20cocoa%20touch%20style)
+ 1. [iTunes api with Result](iTunes%20api%20with%20Result)
+ 1. [iTunes api convert to Result](iTunes%20api%20convert%20to%20Result)
+ 1. [iTunes api add search](iTunes%20api%20add%20search)
+ 1. [iTunes api mapping](iTunes%20api%20mapping)
+ 1. [iTunes api flatMap](iTunes%20api%20flatMap)
+ 1. [Returning multiple error types](Returning%20multiple%20error%20types)
+ 1. [Mixing Result with throwing functions](Mixing%20Result%20with%20throwing%20functions)
+ 1. [Error recovery with Result](Error%20recovery%20with%20Result)
  1. [Never](Never)
- 1. [Exercise 1](Exercise%201)
- 1. [Exercise 2 3 and 4](Exercises%202%203%20and%204)
- 1. [Exercise 5](Exercise%205)
+ 1. [Exercises 1 2 and 3](Exercises%201%202%20and%203)
+ 1. [Exercise 4](Exercise%204)
 
   */
 //: [Next](@next)
