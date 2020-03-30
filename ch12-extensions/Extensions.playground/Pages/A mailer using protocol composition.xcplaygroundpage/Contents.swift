@@ -16,11 +16,11 @@ struct Email {
 }
 
 protocol Mailer {
-    func send(email: Email)
+    func send(email: Email) throws
 }
 
 extension Mailer {
-    func send(email: Email) {
+    func send(email: Email) throws {
         // Connect to server
         // Submit email
     }
