@@ -16,7 +16,7 @@ struct Message {
     let isSendingBalloons: Bool
 }
 
-let joinMessage = Message(userId: "2",
+let joinMessage = Message(userId: "1",
                           contents: nil,
                           date: Date(),
                           hasJoined: true, // We set the joined boolean
@@ -25,7 +25,7 @@ let joinMessage = Message(userId: "2",
     isSendingBalloons: false)
 
 
-let textMessage = Message(userId: "1",
+let textMessage = Message(userId: "2",
                           contents: "Hey everyone!", // We pass a message
     date: Date(),
     hasJoined: false,

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered' executeOnSourceChanges='false'>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
         <page name='Table of contents'/>
-        <page name='iTunes api step 1 call url cocoa touch style'/>
-        <page name='iTunes api step 2 call url with result'/>
-        <page name='iTunes api step 3 add search'/>
-        <page name='iTunes api step 4 mapping'/>
-        <page name='iTunes api step 5 flatMap'/>
-        <page name='iTunes api step 6 throwing inside Result'/>
-        <page name='iTunes api step 7 happy path'/>
-        <page name='AnyError'/>
+        <page name='iTunes api cocoa touch style'/>
+        <page name='iTunes api with result'/>
+        <page name='iTunes api convert to Result'/>
+        <page name='iTunes api add search'/>
+        <page name='iTunes api mapping'/>
+        <page name='iTunes api flatMap'/>
+        <page name='Returning multiple error types'/>
+        <page name='Error recovery with Result'/>
+        <page name='Mixing Result with throwing functions'/>
         <page name='Never'/>
-        <page name='Exercise 1'/>
-        <page name='Exercises 2 3 and 4'/>
-        <page name='Exercise 5'/>
+        <page name='Exercises 1 2 and 3'/>
+        <page name='Exercise 4'/>
     </pages>
 </playground>

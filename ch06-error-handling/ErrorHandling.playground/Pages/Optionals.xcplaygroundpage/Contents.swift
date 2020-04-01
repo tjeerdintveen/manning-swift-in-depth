@@ -1,6 +1,6 @@
 //: [Table of contents](Table%20of%20contents) - [Previous page](@previous) - [Next page](@next)
 
-//: # Delivering pleasant APIs
+//: # Optionals
 
 import Foundation
 import PlaygroundSupport
@@ -15,7 +15,7 @@ func loadFile(name: String) -> Data? {
 
 
 @discardableResult func storeData(image: UIImage, url: URL) -> Bool {
-    guard let data = UIImagePNGRepresentation(image) else {
+    guard let data = image.pngData() else {
         return false
     }
     

@@ -16,18 +16,18 @@ struct Email {
 }
 
 protocol Mailer {
-    func send(email: Email)
+    func send(email: Email) throws
 }
 
 extension Mailer {
-    func send(email: Email) {
+    func send(email: Email) throws {
         // Omitted: Connect to server
         // Omitted: Submit email
     }
 }
 
 protocol ValidatingMailer: Mailer {
-    func send(email: Email) throws // Override send to make it throwing
+    func send(email: Email) throws // Override send
     func validate(email: Email) throws
 }
 

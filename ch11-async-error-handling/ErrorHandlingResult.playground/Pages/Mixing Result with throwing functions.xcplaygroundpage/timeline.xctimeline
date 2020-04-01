@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Timeline
+   version = "3.0">
+   <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/tjeerdintveen/manning-swift-in-depth/ch11-async-error-handling/ErrorHandlingResult.playground/Pages/Mixing%20Result%20with%20throwing%20functions.xcplaygroundpage#CharacterRangeLen=80&amp;CharacterRangeLoc=1090&amp;EndingColumnNumber=81&amp;EndingLineNumber=49&amp;StartingColumnNumber=1&amp;StartingLineNumber=49&amp;Timestamp=607177434.428931"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/tjeerdintveen/manning-swift-in-depth/ch11-async-error-handling/ErrorHandlingResult.playground/Pages/Mixing%20Result%20with%20throwing%20functions.xcplaygroundpage#CharacterRangeLen=79&amp;CharacterRangeLoc=1187&amp;EndingColumnNumber=80&amp;EndingLineNumber=50&amp;StartingColumnNumber=1&amp;StartingLineNumber=50&amp;Timestamp=607177434.429107"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+   </TimelineItems>
+</Timeline>

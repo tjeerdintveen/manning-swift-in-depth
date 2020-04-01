@@ -7,7 +7,7 @@ import Foundation
 //: # Collection
 
 let strayanAnimals = "Kangaroo Koala"
-if let middleIndex = strayanAnimals.index(of: " ") {
+if let middleIndex = strayanAnimals.firstIndex(of: " ") {
     strayanAnimals.prefix(upTo: middleIndex) // Kangaroo
     strayanAnimals.suffix(from: strayanAnimals.index(after: middleIndex)) // Koala
 }

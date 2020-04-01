@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='rendered' executeOnSourceChanges='false'>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
         <page name='Table of contents'/>
         <page name='Horizontal modeling'/>
         <page name='A mailer using protocol inheritance'/>
         <page name='A mailer using protocol composition'/>
         <page name='Protocol overrides'/>
+        <page name='Extending in two directions'/>
+        <page name='Extending with associated types'/>
+        <page name='Extending with concrete constraints'/>
         <page name='Extending Sequence'/>
         <page name='Exercises and Answers'/>
     </pages>

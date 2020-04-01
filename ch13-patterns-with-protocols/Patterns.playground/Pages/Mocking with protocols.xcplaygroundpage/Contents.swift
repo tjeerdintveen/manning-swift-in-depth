@@ -10,7 +10,7 @@ protocol Session {
     associatedtype Task: DataTask
     
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> Task
-    func dataTask(with url: URL, completionHandler: @escaping (Result<Data, AnyError>) -> Void) -> Task
+    func dataTask(with url: URL, completionHandler: @escaping (Result<Data, Error>) -> Void) -> Task
 }
 
 protocol DataTask {
@@ -84,11 +84,10 @@ let offlineApi = WeatherAPI(session: OfflineURLSession())
 //: Bonus extension
 
 extension Session {
-    func dataTask(with url: URL, completionHandler: @escaping (Result<Data, AnyError>) -> Void) -> Task {
+    func dataTask(with url: URL, completionHandler: @escaping (Result<Data, Error>) -> Void) -> Task {
         return dataTask(with: url, completionHandler: { (data, response, error) in
             if let error = error {
-                let anyError = AnyError(error)
-                completionHandler(Result.failure(anyError))
+                completionHandler(Result.failure(error))
             } else if let data = data {
                 completionHandler(Result.success(data))
             } else {
@@ -99,11 +98,11 @@ extension Session {
 }
 
 let url = URL(fileURLWithPath: "")
-URLSession.shared.dataTask(with: url) { (result: Result<Data, AnyError>) in
+URLSession.shared.dataTask(with: url) { (result: Result<Data, Error>) in
     // ...
 }
 
-OfflineURLSession().dataTask(with: url) { (result: Result<Data, AnyError>) in
+OfflineURLSession().dataTask(with: url) { (result: Result<Data, Error>) in
     // ...
 }
 
