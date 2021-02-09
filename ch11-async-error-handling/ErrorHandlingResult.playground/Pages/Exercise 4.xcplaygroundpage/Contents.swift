@@ -6,9 +6,10 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 
 //: # Exercise 5: Mixing throwing functions with Result.
 
-extension Result {
-    
-    init(value: Value?, error: ErrorType?) {
+extension Swift.Result {
+      // ... snip
+
+    init(value: Success?, error: Failure?) {
         if let error = error {
             self = .failure(error)
         } else if let value = value {
@@ -17,20 +18,6 @@ extension Result {
             fatalError("Could not create Result")
         }
     }
-}
-
-extension Result {
-    
-    /// Evaluates the given closure when this Result instance has a value.
-    public func mapError<E: Error>(_ transform: (ErrorType) throws -> E) rethrows -> Result<Value, E> {
-        switch self {
-        case .success(let value):
-            return Result<Value, E>(value)
-        case .failure(let error):
-            return Result<Value, E>(try transform(error))
-        }
-    }
-    
 }
 
 //: # A FourSquare API implementation
@@ -83,7 +70,7 @@ func getVenues(latitude: Double, longitude: Double, completion: @escaping (Resul
     
     guard let url = createURL(endpoint: "venues/search", parameters: parameters)
         else {
-            completion(Result(.couldNotCreateURL))
+        completion(Result.failure(.couldNotCreateURL))
             return
     }
     
@@ -93,25 +80,29 @@ func getVenues(latitude: Double, longitude: Double, completion: @escaping (Resul
             // Parsing Data to JSON
             .flatMap { data in
                 do {
-                    return Result(try parseData(data))
+                    let data = try parseData(data)
+                    return Result.success(data)
                 } catch {
-                    return Result(.unexpectedError(error))
+                    return Result.failure(.unexpectedError(error))
                 }
             }
+            
             // Check for server errors
             .flatMap { (json: JSON) -> Result<JSON, FourSquareError> in
                 do {
-                    return Result(try validateResponse(json: json))
+                    let json = try validateResponse(json: json)
+                    return Result.success(json)
                 } catch {
-                    return Result(.unexpectedError(error))
+                    return Result.failure(.unexpectedError(error))
                 }
             }
             // Extract venues
             .flatMap { (json: JSON) -> Result<[JSON], FourSquareError> in
                 do {
-                    return Result(try extractVenues(json: json))
+                    let venues = try extractVenues(json: json)
+                    return Result.success(venues)
                 } catch {
-                    return Result(.unexpectedError(error))
+                    return Result.failure(.unexpectedError(error))
                 }
         }
         

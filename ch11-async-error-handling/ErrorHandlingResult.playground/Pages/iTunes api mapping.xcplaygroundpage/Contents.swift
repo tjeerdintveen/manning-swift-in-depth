@@ -7,9 +7,10 @@ import PlaygroundSupport
 
 PlaygroundPage.current.needsIndefiniteExecution = true
 
-extension Result {
-    
-    init(value: Value?, error: ErrorType?) {
+extension Swift.Result {
+      // ... snip
+
+    init(value: Success?, error: Failure?) {
         if let error = error {
             self = .failure(error)
         } else if let value = value {
@@ -18,22 +19,6 @@ extension Result {
             fatalError("Could not create Result")
         }
     }
-}
-
-//: We add a custom mapError method so that we can make the ErrorType match the proper type when mapping over result.
-
-extension Result {
-    
-    /// Evaluates the given closure when this Result instance has an error.
-    public func mapError<E: Error>(_ transform: (ErrorType) throws -> E) rethrows -> Result<Value, E> {
-        switch self {
-        case .success(let value):
-            return Result<Value, E>(value)
-        case .failure(let error):
-            return Result<Value, E>(try transform(error))
-        }
-    }
-    
 }
 
 
@@ -65,7 +50,8 @@ func search(term: String, completionHandler: @escaping (SearchResult<JSON>) -> V
     let cleanedTerm = term.components(separatedBy: .whitespacesAndNewlines).joined().lowercased()
     let path = "https://itunes.apple.com/search?term=" + cleanedTerm
     guard let url = URL(string: path) else {
-        completionHandler(SearchResult(.invalidTerm(term)))
+        let failure = SearchResult<JSON>.failure(.invalidTerm(term))
+        completionHandler(failure)
         return
     }
     

@@ -8,7 +8,9 @@ import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 //: A custom extension to accept an optional value and error, for convenience with bridging from NSURLSession
-extension Result {
+
+extension Swift.Result {
+      // ... snip
 
     init(value: Success?, error: Failure?) {
         if let error = error {
@@ -20,6 +22,7 @@ extension Result {
         }
     }
 }
+
 
 enum NetworkError: Error {
     case fetchFailed(Error)

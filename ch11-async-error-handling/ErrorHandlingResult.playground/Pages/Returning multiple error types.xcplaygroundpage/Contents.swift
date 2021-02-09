@@ -7,10 +7,10 @@ import PlaygroundSupport
 
 PlaygroundPage.current.needsIndefiniteExecution = true
 
-extension Result {
+extension Swift.Result {
     
-    init(value: Value?, error: ErrorType?) {
-        if let error = error {
+    init(value: Success?, error: Error?) {
+        if let error = error as? Failure {
             self = .failure(error)
         } else if let value = value {
             self = .success(value)
@@ -18,20 +18,6 @@ extension Result {
             fatalError("Could not create Result")
         }
     }
-}
-
-extension Result {
-    
-    /// Evaluates the given closure when this Result instance has an error.
-    public func mapError<E: Error>(_ transform: (ErrorType) throws -> E) rethrows -> Result<Value, E> {
-        switch self {
-        case .success(let value):
-            return Result<Value, E>(value)
-        case .failure(let error):
-            return Result<Value, E>(try transform(error))
-        }
-    }
-    
 }
 
 //: # Implementing Result
@@ -80,23 +66,23 @@ func search(term: String, completionHandler: @escaping (SearchResult<JSON>) -> V
     let cleanedTerm = term.components(separatedBy: .whitespacesAndNewlines).joined().lowercased()
     let path = "https://itunes.apple.com/search?term=" + cleanedTerm
     guard let url = URL(string: path) else {
-        completionHandler(SearchResult(.invalidTerm(term)))
+        let failure = SearchResult<JSON>.failure(.invalidTerm(term))
+        completionHandler(failure)
         return
     }
     
     callURL(with: url) { result in
         let convertedResult: SearchResult<JSON> =
             result
-                .mapError { SearchResultError.underlyingError($0) }
-                .flatMap { (data: Data) -> SearchResult<JSON> in
-                    do {
-                        // Catch if the parseData method throws some error.
-                        let searchResult: SearchResult<JSON> = Result(try parseData(data))
-                        return searchResult
-                    } catch {
-                        // We ignore any errors that parseData throws and revert to SearchResultError
-                        return SearchResult(.invalidData)
-                    }
+            .mapError { SearchResultError.underlyingError($0) }
+            .flatMap { (data: Data) -> SearchResult<JSON> in
+                do {
+                    let data = try parseData(data)
+                    return SearchResult.success(data)
+                } catch {
+                    // We ignore any errors that parseData throws and revert to SearchResultError
+                    return SearchResult.failure(.invalidData)
+                }
         }
         
         completionHandler(convertedResult)

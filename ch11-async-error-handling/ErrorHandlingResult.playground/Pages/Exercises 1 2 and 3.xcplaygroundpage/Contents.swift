@@ -6,10 +6,10 @@ PlaygroundPage.current.needsIndefiniteExecution = true
 
 //: # Exercises 2, 3, and 4: FourSquare API with Result.
 
-extension Result {
+extension Swift.Result {
     
-    init(value: Value?, error: ErrorType?) {
-        if let error = error {
+    init(value: Success?, error: Error?) {
+        if let error = error as? Failure {
             self = .failure(error)
         } else if let value = value {
             self = .success(value)
@@ -17,20 +17,6 @@ extension Result {
             fatalError("Could not create Result")
         }
     }
-}
-
-extension Result {
-    
-    /// Evaluates the given closure when this Result instance has a value.
-    public func mapError<E: Error>(_ transform: (ErrorType) throws -> E) rethrows -> Result<Value, E> {
-        switch self {
-        case .success(let value):
-            return Result<Value, E>(value)
-        case .failure(let error):
-            return Result<Value, E>(try transform(error))
-        }
-    }
-    
 }
 
 //: # A FourSquare API implementation
@@ -82,7 +68,7 @@ func getVenues(latitude: Double, longitude: Double, completion: @escaping (Resul
     
     guard let url = createURL(endpoint: "venues/search", parameters: parameters)
         else {
-            completion(Result(.couldNotCreateURL))
+        completion(Result.failure(.couldNotCreateURL))
             return
     }
     
@@ -95,9 +81,9 @@ func getVenues(latitude: Double, longitude: Double, completion: @escaping (Resul
                     let rawJson = try? JSONSerialization.jsonObject(with: data, options: []),
                     let json = rawJson as? JSON
                     else {
-                        return Result(.couldNotParseData)
+                    return Result.failure(.couldNotParseData)
                 }
-                return Result(json)
+                return Result.success(json)
             }
             // Check for server errors
             .flatMap { (json: JSON) -> Result<JSON, FourSquareError> in
@@ -105,10 +91,10 @@ func getVenues(latitude: Double, longitude: Double, completion: @escaping (Resul
                     let meta = json["meta"] as? JSON,
                     let errorType = meta["errorType"] as? String,
                     let errorDetail = meta["errorDetail"] as? String {
-                    return Result(.serverError(errorType: errorType, errorDetail: errorDetail))
+                    return Result.failure(.serverError(errorType: errorType, errorDetail: errorDetail))
                 }
                 
-                return Result(json)
+                return Result.success(json)
             }
             // Extract venues
             .flatMap { (json: JSON) -> Result<[JSON], FourSquareError> in
@@ -116,9 +102,9 @@ func getVenues(latitude: Double, longitude: Double, completion: @escaping (Resul
                     let response = json["response"] as? JSON,
                     let venues = response["venues"] as? [JSON]
                     else {
-                        return Result(.couldNotParseData)
+                    return Result.failure(.couldNotParseData)
                 }
-                return Result(venues)
+                return Result.success(venues)
         }
         
         completion(result)

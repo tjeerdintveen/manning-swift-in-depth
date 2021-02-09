@@ -8,9 +8,10 @@ import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 //: A custom extension to accept an optional value and error, for convenience with bridging from NSURLSession
-extension Result {
-    
-    init(value: Value?, error: ErrorType?) {
+extension Swift.Result {
+      // ... snip
+
+    init(value: Success?, error: Failure?) {
         if let error = error {
             self = .failure(error)
         } else if let value = value {
@@ -49,7 +50,8 @@ func search(term: String, completionHandler: @escaping (SearchResult<JSON>) -> V
     let path = encodedString.map { "https://itunes.apple.com/search?term=" + $0 }
     
     guard let url = path.flatMap(URL.init) else {
-        completionHandler(SearchResult(.invalidTerm(term)))
+        let failure = SearchResult<JSON>.failure(.invalidTerm(term))
+        completionHandler(failure)
         return
     }
 
@@ -59,14 +61,14 @@ func search(term: String, completionHandler: @escaping (SearchResult<JSON>) -> V
             if
                 let json = try? JSONSerialization.jsonObject(with: data, options: []),
                 let jsonDictionary = json as? JSON {
-                let result = SearchResult<JSON>(jsonDictionary)
+                let result = SearchResult<JSON>.success(jsonDictionary)
                 completionHandler(result)
             } else {
-                let result = SearchResult<JSON>(.invalidData)
+                let result = SearchResult<JSON>.failure(.invalidData)
                 completionHandler(result)
             }
         case .failure(let error):
-            let result = SearchResult<JSON>(.underlyingError(error))
+            let result = SearchResult<JSON>.failure(.underlyingError(error))
             completionHandler(result)
         }
     }

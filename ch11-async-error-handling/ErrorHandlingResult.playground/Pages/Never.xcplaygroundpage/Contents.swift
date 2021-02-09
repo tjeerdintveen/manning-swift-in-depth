@@ -31,13 +31,11 @@ subscriptionsLoader.load { (result: Result<[Subscription], BogusError>) in
 */
 //: Using the Never type
 
-extension Never: Error {}
-
 final class SubscriptionsLoader: Service {
     func load(complete: @escaping (Result<[Subscription], Never>) -> Void) {
         // ... load data. Always succeeds
         let subscriptions = [Subscription(), Subscription()]
-        complete(Result(subscriptions))
+        complete(Result.success(subscriptions))
     }
 }
 
