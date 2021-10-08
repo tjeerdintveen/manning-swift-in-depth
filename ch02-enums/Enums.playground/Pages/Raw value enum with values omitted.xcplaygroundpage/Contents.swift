@@ -11,7 +11,7 @@ enum Currency: String {
 }
 
 let currency = Currency.euro
-print(currency.rawValue) // "usd"
+print(currency.rawValue) // "euro"
 
 
 let parameters = ["filter": currency.rawValue]
